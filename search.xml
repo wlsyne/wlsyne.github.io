@@ -15,10 +15,10 @@
   
     
     <entry>
-      <title>图库</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      <content type="html"><![CDATA[]]></content>
+      <title></title>
+      <link href="/gallery/gallery.json"/>
+      <url>/gallery/gallery.json</url>
+      <content type="html"><![CDATA[null]]></content>
     </entry>
     
     <entry>
@@ -36,10 +36,10 @@
     </entry>
     
     <entry>
-      <title></title>
-      <link href="/gallery/gallery.json"/>
-      <url>/gallery/gallery.json</url>
-      <content type="html"><![CDATA[null]]></content>
+      <title>图库</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      <content type="html"><![CDATA[]]></content>
     </entry>
     
   

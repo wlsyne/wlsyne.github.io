@@ -43,7 +43,7 @@
     
     <title>
         
-            我的第一篇博客 | 
+            MarkDown语法总结 | 
         
         Hexo
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="博客">
+    <meta name="keywords" content="博客,markdown语法">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -80,6 +80,11 @@
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-plateau-light.min.css?rS0O2GncgUIwYRD4t/qQNQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
         
 
     
@@ -210,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/05/我的第一篇博客/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/11/我的第一篇博客/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -225,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/06/05/我的第一篇博客/">
+    <meta property="og:url" content="http://yoursite.com/2018/06/11/我的第一篇博客/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="我的第一篇博客 | Hexo">
+    <meta property="og:title" content="MarkDown语法总结 | Hexo">
     <meta property="og:image" content="/img/icon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="markdown语法"> 
 
     
-        <meta property="article:published_time" content="Tue Jun 05 2018 23:20:12 GMT+0800">
-        <meta property="article:modified_time" content="Tue Jun 05 2018 23:34:29 GMT+0800">
+        <meta property="article:published_time" content="Mon Jun 11 2018 13:55:18 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jun 12 2018 00:57:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/06/05/我的第一篇博客/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/06/11/我的第一篇博客/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -254,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/06/05/我的第一篇博客/index.html",
-    "headline": "我的第一篇博客",
-    "datePublished": "Tue Jun 05 2018 23:20:12 GMT+0800",
-    "dateModified": "Tue Jun 05 2018 23:34:29 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/06/11/我的第一篇博客/index.html",
+    "headline": "MarkDown语法总结",
+    "datePublished": "Mon Jun 11 2018 13:55:18 GMT+0800",
+    "dateModified": "Tue Jun 12 2018 00:57:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -275,7 +280,7 @@
             "url": "/img/icon.png"
         }
     },
-    "keywords": "博客",
+    "keywords": ",markdown语法博客",
     "description": "",
 }
 </script>
@@ -335,6 +340,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#这是我常用的MarkDown语法"><span class="post-toc-text"> 这是我常用的MarkDown语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-斜体字与加粗"><span class="post-toc-text">1.斜体字与加粗</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-1-斜体字"><span class="post-toc-text">1.1 斜体字</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-2-加粗字"><span class="post-toc-text">1.2 加粗字</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-删除线"><span class="post-toc-text">2.删除线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-代码块"><span class="post-toc-text">3.代码块</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-链接"><span class="post-toc-text">4.链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-1地址链接"><span class="post-toc-text">4.1地址链接</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-12邮箱链接"><span class="post-toc-text">4.12邮箱链接</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-图片"><span class="post-toc-text">5.图片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-1插入普通图片"><span class="post-toc-text">5.1插入普通图片</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-2插入带链接的图片"><span class="post-toc-text">5.2插入带链接的图片</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-列表"><span class="post-toc-text">6.列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-1有序列表"><span class="post-toc-text">6.1有序列表</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-2无序列表"><span class="post-toc-text">6.2无序列表</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-引用"><span class="post-toc-text">7.引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-1单行引用"><span class="post-toc-text">7.1单行引用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-2多行引用"><span class="post-toc-text">7.2多行引用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-3多行嵌套"><span class="post-toc-text">7.3多行嵌套</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo标签插件"><span class="post-toc-text">hexo标签插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-引用块"><span class="post-toc-text">1.引用块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-1普通引用快"><span class="post-toc-text">1.1普通引用快</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-2引用书籍的内容"><span class="post-toc-text">1.2引用书籍的内容</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3引用网址的内容"><span class="post-toc-text">1.3引用网址的内容</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-4引用网页上的文章"><span class="post-toc-text">1.4引用网页上的文章</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-代码块"><span class="post-toc-text">2.代码块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-1普通代码块"><span class="post-toc-text">2.1普通代码块</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-指定语言的代码块"><span class="post-toc-text">2.2 指定语言的代码块</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-加入图片"><span class="post-toc-text">3. 加入图片</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#以上就是我写博客常用的MarkDown语法啦"><span class="post-toc-text">以上就是我写博客常用的MarkDown语法啦</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -352,10 +366,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://p9zhc8gz7.bkt.clouddn.com/ade612df081c251db0260ce82d3f4eb0%20%281%29.jpg)">
     
             <p class="article-headline-p">
-                我的第一篇博客
+                MarkDown语法总结
             </p>
         </div>
 
@@ -374,7 +388,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Syne</strong>
-        <span>6月 05, 2018</span>
+        <span>6月 11, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -392,6 +406,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/markdown语法/">markdown语法</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -406,7 +429,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=我的第一篇博客&url=http://yoursite.com/2018/06/05/我的第一篇博客/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MarkDown语法总结&url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -415,7 +438,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=我的第一篇博客&url=http://yoursite.com/2018/06/05/我的第一篇博客/index.html&via=Syne" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MarkDown语法总结&url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html&via=Syne" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -424,7 +447,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/06/05/我的第一篇博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/06/11/我的第一篇博客/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -433,7 +456,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/05/我的第一篇博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -458,7 +481,139 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h2 id="这是我常用的MarkDown语法"><a href="#这是我常用的MarkDown语法" class="headerlink" title=" 这是我常用的MarkDown语法"></a> 这是我常用的MarkDown语法</h2><h4 id="1-斜体字与加粗"><a href="#1-斜体字与加粗" class="headerlink" title="1.斜体字与加粗"></a>1.斜体字与加粗</h4><h6 id="1-1-斜体字"><a href="#1-1-斜体字" class="headerlink" title="1.1 斜体字"></a>1.1 斜体字</h6><p>  语法：* *<br>  代码: </p>
+<pre><code>*一支穿云箭*
+</code></pre><p>演示效果：<em>一支穿云箭</em></p>
+<h6 id="1-2-加粗字"><a href="#1-2-加粗字" class="headerlink" title="1.2 加粗字"></a>1.2 加粗字</h6><p>  语法：** **<br>  代码: </p>
+<pre><code>  **千军万马来相见**
+</code></pre><p>演示效果：<strong>千军万马来相见</strong></p>
+<h4 id="2-删除线"><a href="#2-删除线" class="headerlink" title="2.删除线"></a>2.删除线</h4><p> 语法：~~ ~~<br> 代码: </p>
+<pre><code> ~~问你苦不苦？~~
+</code></pre><p>演示效果：<del>问你苦不苦？</del></p>
+<h4 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3.代码块"></a>3.代码块</h4><p>  语法：``` ```<br>  代码:  </p>
+<pre><code>``` html
+&lt;div class=&quot;xixi&quot; id=&quot;haha&quot;&gt;&lt;p&gt;我什么都不知道啊&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;你猜我知不知道&lt;/p&gt;
+```
+</code></pre><p>  演示效果：</p>
+<pre><code class="html">&lt;div class=&quot;xixi&quot; id=&quot;haha&quot;&gt;&lt;p&gt;我什么都不知道啊&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;你猜我知不知道&lt;/p&gt;
+</code></pre>
+  <p style="color:rgb(250,150,150)">PS:加在```后的是语言类型，如：javascript、html、css等</p>
+
+<h4 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h4><h6 id="4-1地址链接"><a href="#4-1地址链接" class="headerlink" title="4.1地址链接"></a>4.1地址链接</h6><p>语法：[title](链接地址)<br>代码：</p>
+<pre><code>[百度一下](http://www.taobao.com)
+</code></pre><p>演示效果：<a href="http://www.taobao.com" target="_blank" rel="noopener">百度一下</a></p>
+<h6 id="4-12邮箱链接"><a href="#4-12邮箱链接" class="headerlink" title="4.12邮箱链接"></a>4.12邮箱链接</h6><p>语法：&lt;邮箱地址&gt;<br>代码：</p>
+<pre><code>&lt;738481015@qq.com&gt;
+</code></pre><p>演示效果：<a href="mailto:&#x37;&#x33;&#56;&#52;&#56;&#49;&#48;&#49;&#x35;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x37;&#x33;&#56;&#52;&#56;&#49;&#48;&#49;&#x35;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p>
+<h4 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h4><h6 id="5-1插入普通图片"><a href="#5-1插入普通图片" class="headerlink" title="5.1插入普通图片"></a>5.1插入普通图片</h6><p>语法：![图片alt](图片地址)<br>代码：</p>
+<pre><code>![测试一下图片](./bg1.jp代码)
+</code></pre><p>演示效果：<img src="/2018/06/11/我的第一篇博客/bg1.jpeg" alt="测试一下图片"></p>
+<h6 id="5-2插入带链接的图片"><a href="#5-2插入带链接的图片" class="headerlink" title="5.2插入带链接的图片"></a>5.2插入带链接的图片</h6><p>语法：[![图片alt](图片地址)](链接地址)<br>代码：</p>
+<pre><code>[![测试一下图片](./bg1.jp代码)](http://www.baidu.com)
+</code></pre><p>演示效果：<a href="http://www.baidu.com" target="_blank" rel="noopener"><img src="/2018/06/11/我的第一篇博客/bg1.jpeg" alt="测试一下图片"></a></p>
+<h4 id="6-列表"><a href="#6-列表" class="headerlink" title="6.列表"></a>6.列表</h4><h6 id="6-1有序列表"><a href="#6-1有序列表" class="headerlink" title="6.1有序列表"></a>6.1有序列表</h6><p>语法：1. 2. 3.<br>代码：</p>
+<pre><code>1. 嘻嘻嘻
+2. 哈哈哈
+3. 呵呵呵
+</code></pre><p>演示效果：</p>
+<ol>
+<li>嘻嘻嘻</li>
+<li>哈哈哈</li>
+<li>呵呵呵</li>
+</ol>
+<p style="color:rgb(250,150,150)">PS：.后面需要加一个空格</p>
+
+<h6 id="6-2无序列表"><a href="#6-2无序列表" class="headerlink" title="6.2无序列表"></a>6.2无序列表</h6><p>语法：*<br>代码：</p>
+<pre><code>* 银鞍照白马
+* 飒沓如流星
+</code></pre><p>演示效果：</p>
+<ul>
+<li>银鞍照白马</li>
+<li>飒沓如流星</li>
+</ul>
+<h4 id="7-引用"><a href="#7-引用" class="headerlink" title="7.引用"></a>7.引用</h4><h6 id="7-1单行引用"><a href="#7-1单行引用" class="headerlink" title="7.1单行引用"></a>7.1单行引用</h6><p>语法：&gt;<br>代码：</p>
+<pre><code>&gt; 十步杀一人，千里不留行
+</code></pre><p>演示效果：</p>
+<blockquote>
+<p>十步杀一人，千里不留行</p>
+</blockquote>
+<h6 id="7-2多行引用"><a href="#7-2多行引用" class="headerlink" title="7.2多行引用"></a>7.2多行引用</h6><p>语法：&gt;<br>代码：</p>
+<pre><code>&gt; 十步杀一人，千里不留行
+&gt; 事了拂衣去，深藏功与名
+</code></pre><p>演示效果：</p>
+<blockquote>
+<p>十步杀一人，千里不留行<br>事了拂衣去，深藏功与名</p>
+</blockquote>
+<h6 id="7-3多行嵌套"><a href="#7-3多行嵌套" class="headerlink" title="7.3多行嵌套"></a>7.3多行嵌套</h6><p>语法：&gt;<br>代码：</p>
+<pre><code>&gt; 云想衣裳花想容，春风拂槛露华浓
+&gt;&gt; 若非群玉山头见，会向瑶台月下逢
+&gt;&gt;&gt;一枝红艳露凝香，云雨巫山枉断肠
+</code></pre><p>演示效果：</p>
+<blockquote>
+<p>云想衣裳花想容，春风拂槛露华浓</p>
+<blockquote>
+<p>若非群玉山头见，会向瑶台月下逢</p>
+<blockquote>
+<p>一枝红艳露凝香，云雨巫山枉断肠</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><hr></p>
+<h3 id="hexo标签插件"><a href="#hexo标签插件" class="headerlink" title="hexo标签插件"></a>hexo标签插件</h3><h4 id="1-引用块"><a href="#1-引用块" class="headerlink" title="1.引用块"></a>1.引用块</h4><pre><code>{% blockquote [author[, source]] [link] [source_link_title] %}
+content
+{% endblockquote %}
+</code></pre><h6 id="1-1普通引用快"><a href="#1-1普通引用快" class="headerlink" title="1.1普通引用快"></a>1.1普通引用快</h6><p>代码：</p>
+<pre><code>{% blockquote %}
+春江潮水连海平，海上明月共潮生。
+滟滟随波千万里，何处春江无月明。
+{% endblockquote %}
+</code></pre><p>演示效果：<br><blockquote><p>春江潮水连海平，海上明月共潮生。<br>滟滟随波千万里，何处春江无月明。</p>
+</blockquote></p>
+<h6 id="1-2引用书籍的内容"><a href="#1-2引用书籍的内容" class="headerlink" title="1.2引用书籍的内容"></a>1.2引用书籍的内容</h6><p>代码：</p>
+<pre><code>{% blockquote 《Do not go gentle into that good night》, ——Dylan Thomas %}
+Do not go gentle into that good night,
+Old age should burn and rave at close of day;
+Rage, rage against the dying of the light.
+{% endblockquote %}
+</code></pre><p>演示效果：<br><blockquote><p>Do not go gentle into that good night,<br>Old age should burn and rave at close of day;<br>Rage, rage against the dying of the light.</p>
+<footer><strong>《Do not go gentle into that good night》</strong><cite>——Dylan Thomas</cite></footer></blockquote></p>
+<h6 id="1-3引用网址的内容"><a href="#1-3引用网址的内容" class="headerlink" title="1.3引用网址的内容"></a>1.3引用网址的内容</h6><p>代码：</p>
+<pre><code>{% blockquote @Synewl http://synewl.coding.me/ %}
+你以为完事啦？
+{% endblockquote %}
+</code></pre><p>演示效果：<br><blockquote><p>你以为完事啦？</p>
+<footer><strong>@Synewl——</strong><cite><a href="http://synewl.coding.me/" target="_blank" rel="noopener">synewl.coding.me</a></cite></footer></blockquote></p>
+<h6 id="1-4引用网页上的文章"><a href="#1-4引用网页上的文章" class="headerlink" title="1.4引用网页上的文章"></a>1.4引用网页上的文章</h6><p>代码：</p>
+<pre><code>{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
+Every interaction is both precious and an opportunity to delight.
+{% endblockquote %}
+</code></pre><p>展示效果：<br><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote></p>
+<h4 id="2-代码块"><a href="#2-代码块" class="headerlink" title="2.代码块"></a>2.代码块</h4><pre><code>{% codeblock [title] [lang:language] [url] [link text] %}
+code snippet
+{% endcodeblock %}
+</code></pre><h6 id="2-1普通代码块"><a href="#2-1普通代码块" class="headerlink" title="2.1普通代码块"></a>2.1普通代码块</h6><p>代码：</p>
+<pre><code>{% codeblock %}
+console.log('你该不会是个傻子吧？');
+{% endcodeblock %}
+</code></pre><p>展示效果：<br><pre><code>console.log(&#39;你该不会是个傻子吧？&#39;);</code></pre></p>
+<h6 id="2-2-指定语言的代码块"><a href="#2-2-指定语言的代码块" class="headerlink" title="2.2 指定语言的代码块"></a>2.2 指定语言的代码块</h6><p>代码：</p>
+<pre><code>{% codeblock lang:javascript %}
+let a={}
+let b=[]
+{% endcodeblock %}
+</code></pre><p>演示效果：<br><pre><code>let a={}
+let b=[]</code></pre></p>
+<h4 id="3-加入图片"><a href="#3-加入图片" class="headerlink" title="3. 加入图片"></a>3. 加入图片</h4><p>代码：</p>
+<pre><code>{% img testImg /2018/06/11/我的第一篇博客/bg1.jpeg 1000 200 我只是看下大不大%}
+</code></pre><p>演示效果：<br><img src="/2018/06/11/我的第一篇博客/bg1.jpeg" class="testImg" width="1000" height="200" title="我只是看下大不大"></p>
+<hr>
+
+<h4 id="以上就是我写博客常用的MarkDown语法啦"><a href="#以上就是我写博客常用的MarkDown语法啦" class="headerlink" title="以上就是我写博客常用的MarkDown语法啦"></a>以上就是我写博客常用的MarkDown语法啦</h4><p>希望大家也可以每天写写字，记录生活<br><img src="/2018/06/11/我的第一篇博客/photo1.jpg"></p>
+<p style="text-align:center;font-size:28px">The End</p>
+
         
     
 
@@ -832,6 +987,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -842,6 +1003,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>

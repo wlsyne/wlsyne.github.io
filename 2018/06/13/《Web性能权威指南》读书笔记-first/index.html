@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Wed Jun 13 2018 10:28:52 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jun 13 2018 13:11:55 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jun 13 2018 14:09:49 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/06/13/《Web性能权威指南》读书笔记-first/index.html",
     "headline": "《Web性能权威指南》读书笔记---first",
     "datePublished": "Wed Jun 13 2018 10:28:52 GMT+0800",
-    "dateModified": "Wed Jun 13 2018 13:11:55 GMT+0800",
+    "dateModified": "Wed Jun 13 2018 14:09:49 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -495,12 +495,12 @@
 <li>带宽：逻辑或物理通信路径最大的吞吐量</li>
 </ul>
 <h6 id="1-2延迟的构成"><a href="#1-2延迟的构成" class="headerlink" title="1.2延迟的构成"></a>1.2延迟的构成</h6><ul>
-<li>传播延迟：消息或分组从发手段到接收端需要的时间，是信号传播距离和速度的函数</li>
+<li>传播延迟：消息或分组从发送端到接收端需要的时间，是信号传播距离和速度的函数</li>
 <li>传输延迟：把消息或分组中的所有比特转移到链路中需要的时间，是消息长度和链路速率的函数<p style="color:rgb(250,150,150)">PS: 比特（BIT，binary system），计算机专业术语，是信息量单位，是由英文BIT音译而来。同时也是二进制数字中的位，信息量的度量单位，为信息量的最小单位。即信号的信息量</p><p style="color:rgb(250,150,150)">链路，有线通信时，链路指两个节点之间的物理线路，如电缆或光纤。无线电通信时，链路指基站和终端之间传播电磁波的路径空间。水声通信时链路指换能器和水听器之间的传播声波的路径空间。</p></li>
 <li>处理延迟：处理信息或分组首部、检查错误及确定分组目标所需要的时间</li>
 <li>排队延迟：分组到达路由器时排队等待处理的时间</li>
 </ul>
-<h6 id="1-3光速与传播延迟"><a href="#1-3光速与传播延迟" class="headerlink" title="1.3光速与传播延迟"></a>1.3光速与传播延迟</h6><p>传播速度是不会快于光速的。在网络中的信息或者分组是通过铜线、光纤等介质传播的，这些介质会导致传播速度变慢。<br>光速与分组在介质中的传播速度之比叫做丐姐自的折射率，这个值越大，光在该介质的传播速度越慢。通常在1.4-1.6不等。<br><strong>重要概念</strong><br>CDN：Content Delivery Network 内容分发网络，服务器的用途有很多，但是最重要的就是通过把内容部署在全球各地，让用户从最近的服务器加载内容，大幅度降低传播分组的时间。<strong>把数据托管到CDN能够显著的提高性能。</strong></p>
+<h6 id="1-3光速与传播延迟"><a href="#1-3光速与传播延迟" class="headerlink" title="1.3光速与传播延迟"></a>1.3光速与传播延迟</h6><p>传播速度是不会快于光速的。在网络中的信息或者分组是通过铜线、光纤等介质传播的，这些介质会导致传播速度变慢。<br>光速与分组在介质中的传播速度之比叫做介质的折射率，这个值越大，光在该介质的传播速度越慢。通常在1.4-1.6不等。<br><strong>重要概念</strong><br>CDN：Content Delivery Network 内容分发网络，服务器的用途有很多，但是最重要的就是通过把内容部署在全球各地，让用户从最近的服务器加载内容，大幅度降低传播分组的时间。<strong>把数据托管到CDN能够显著的提高性能。</strong></p>
 <h6 id="1-4延迟的最后一公里"><a href="#1-4延迟的最后一公里" class="headerlink" title="1.4延迟的最后一公里"></a>1.4延迟的最后一公里</h6><p>为了让你的设备接入互联网，本地ISP需要在附近安装多个路由器手机信号，然后再将信号转发到本地的路由节点。连接类型、路由技术和部署方式，每个ISP都不尽相同，分组传输中的前几跳往往要花费数十毫秒时间才能到达ISP的主路由器。</p>
 <p style="color:rgb(250,150,150)">PS: ISP(Internet Service Provider)，互联网服务提供商，即向广大用户综合提供互联网接入业务、信息业务、和增值业务的电信运营商。</p>
 

@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Wed Jun 13 2018 17:58:55 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jun 13 2018 23:26:26 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jun 19 2018 01:56:52 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/06/13/《Web性能权威指南》读书笔记-second/index.html",
     "headline": "《Web性能权威指南》读书笔记---second",
     "datePublished": "Wed Jun 13 2018 17:58:55 GMT+0800",
-    "dateModified": "Wed Jun 13 2018 23:26:26 GMT+0800",
+    "dateModified": "Tue Jun 19 2018 01:56:52 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二章-TCP的构成"><span class="post-toc-text">第二章 TCP的构成</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二章-TCP的构成"><span class="post-toc-text">第二章 TCP的构成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-1-三次握手"><span class="post-toc-text">2.1 三次握手</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-拥塞预防和控制"><span class="post-toc-text">2.2 拥塞预防和控制</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-1流量控制"><span class="post-toc-text">2.2.1流量控制</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-2慢启动"><span class="post-toc-text">2.2.2慢启动</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-3-拥塞预防"><span class="post-toc-text">2.2.3 拥塞预防</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-3-带宽延迟积"><span class="post-toc-text">2.3 带宽延迟积</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-4-队首阻塞"><span class="post-toc-text">2.4 队首阻塞</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-5-针对TCP的优化建议"><span class="post-toc-text">2.5 针对TCP的优化建议</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-5-1-服务器配置调优"><span class="post-toc-text">2.5.1 服务器配置调优</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-5-2-应用程序行为调优"><span class="post-toc-text">2.5.2 应用程序行为调优</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-5-3-总结"><span class="post-toc-text">2.5.3 总结</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -485,10 +485,109 @@
 <footer><strong>《Web性能权威指南》</strong><cite>——Ilya Grigorik</cite></footer></blockquote>
 <h4 id="第二章-TCP的构成"><a href="#第二章-TCP的构成" class="headerlink" title="第二章 TCP的构成"></a>第二章 TCP的构成</h4><p>首先先说一下OSI七层模型：<br>开放系统互连参考模型 (Open System Interconnect 简称OSI）是国际标准化组织(ISO)和国际电报电话咨询委员会(CCITT)联合制定的开放系统互连参考模型，为开放式互连信息系统提供了一种功能结构的框架。它从低到高分别是：物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。</p>
 <ul>
-<li>物理层：物理层并不是物理媒体本身，它只是开放系统中利用物理媒体实现物理连接的功能描述和执行连接的规程。物理层提供用于建立、保持和断开物理连接的机械的、电气的、功能的和过程的条件。简而言之，物理层提供有关同步和全双工比特流在物理媒体上的传输手段，其典型的协议有RS 232C、RS 449/422/423、V.24和X.21、X.21bis等。</li>
-<li>数据链路层：</li>
+<li><p><strong>物理层：</strong>物理层并不是物理媒体本身，它只是开放系统中利用物理媒体实现物理连接的功能描述和执行连接的规程。物理层提供用于建立、保持和断开物理连接的机械的、电气的、功能的和过程的条件。简而言之，物理层提供有关同步和全双工比特流在物理媒体上的传输手段，其典型的协议有RS 232C、RS 449/422/423、V.24和X.21、X.21bis等。</p>
+</li>
+<li><p><strong>数据链路层：</strong>数据链路可以粗略地理解为<em><strong>数据通道</strong></em>。物理层要为终端设备间的数据通信提供传输介质及其连接。介质是长期的，连接是有生存期的。在连接生存期内，收发两端可以进行不等的一次或多次数据通信。每次通信都要经过建立通信联络和拆除通信联络两个过程。<em><strong>这种建立起来的数据收发关系就叫做数据链路。</strong></em>而在物理媒体上传输的数据难免受到各种不可靠因素的影响而产生差错，为了弥补物理层上的不足，为上层提供无差错的数据传输，就要能对数据进行检错和纠错。数据链路的建立，拆除，对数据的检错，纠错是数据链路层的基本任务。</p>
+</li>
+<li><p><strong>网络层：</strong>网络层的产生也是网络发展的结果。在联机系统和线路交换的环境中，网络层的功能没有太大意义。当数据终端增多时。它们之间有中继设备相连，此时会出现一台终端要求不只是与惟一的一台而是能和多台终端通信的情况，这就产生了把任意两台数据终端设备的数据链接起来的问题，也就是路由或者叫寻径。另外，当一条物理信道建立之后，被一对用户使用，往往有许多空闲时间被浪费掉。人们自然会希望让多对用户共用一条链路，为解决这一问题就出现了逻辑信道技术和虚拟电路技术。<br>我们常见的是路由器、网关等</p>
+</li>
+<li><p><strong>传输层：</strong>提供建立、维护和拆除传送连接的功能；选择网络层提供最合适的服务；在系统之间提供可靠的透明的数据传送，提供端到端的错误恢复和流量控制。端开放系统之间的数据传送控制层。主要功能是端开放系统之间数据的收妥确认。同时，还用于弥补各种通信网路的质量差异，对经过下三层之后仍然存在的传输差错进行恢复，进一步提高可靠性。<br>很多时候我们会发现QQ聊天的速度很快，但是我们上网速度就很慢，这就是因为QQ使用UDP协议，没有纠错功能，而网络的传输使用的是TCP协议，它的纠错功能就会导致传输速度变慢。</p>
+</li>
+<li><p><strong>会话层：</strong>提供两进程之间建立、维护和结束会话连接的功能；提供交互会话的管理功能，如三种数据流方向的控制，即一路交互、两路交替和两路同时会话模式 。会话层是会话单位的控制层，其主要功能是按照在应用进程之间约定的原则，按照正确的顺序收、发数据，进行各种形态的对话。会话层规定了会话服务用户间会话连接的建立和拆除规程以及数据传送规程。</p>
+</li>
+<li><p><strong>表示层：</strong>代表应用进程协商数据表示；完成数据转换、格式化和文本压缩。表示层是数据表示形式的控制层，其主要功能是把应用层提供的信息变换为能够共同理解的形式，提供字符代码、数据格式、控制信息格式、加密等的统一表示。表示层的作用之一是为异种机通信提供一种公共语言，以便能进行互操作。</p>
+</li>
+<li><p><strong>应用层：</strong>提供OSI用户服务，例如事务处理程序、文件传送协议和网络管理等。</p>
+</li>
 </ul>
+<p>七层模型是很抽象的一个概念。一般情况下，<strong><em>物理层，数据链路层，网络层对应的是一个设备，</em></strong>这个设备在某一层就有某种功能，<strong><em>而传输层，会话层，表示层对应的是协议，</em></strong>而应用层就是使用什么样的软件。<br><img src="/2018/06/13/《Web性能权威指南》读书笔记-second/osi.jpg" class="osi" title="OSI七层模型"></p>
+<p><strong>核心概念</strong></p>
+<ul>
+<li><p><strong>TCP：</strong>TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由IETF的RFC 793定义。负责在不可靠的传输信道上提供可靠的抽象层TCP和UDP位于OSI七层模型的传输层。</p>
+</li>
+<li><p><strong>IP：</strong>IP即Internet Protocol（因特网协议）负责联网主机间的路由选择和寻址。位于OSI七层模型的网络层</p>
+</li>
+<li><p><strong>RFC：</strong>Request For Comments（RFC），是一系列以编号排定的文件。文件收集了有关互联网相关信息，以及UNIX和互联网社区的软件文件。目前RFC文件是由Internet Society（ISOC）赞助发行。基本的互联网通信协议都有在RFC文件内详细说明。RFC文件还额外加入许多的论题在标准内，例如对于互联网新开发的协议及发展中所有的记录。因此几乎所有的互联网标准都有收录在RFC文件之中。</p><p style="color:rgb(250,150,150)">一个RFC文件在成为官方标准前一般至少要经历4个阶段【RFC2026】：因特网草案、建议标准、草案标准、因特网标准。</p><p></p>
+</li>
+</ul>
+<p>TCP负责在不可靠的传输通道上提供可靠的抽象层，向应用层隐藏了大多数网络通信的复杂细节，比如丢包重发、按序发送、拥塞控制及避免、数据完整等等。采用TCP数据流可以确保所有的发送字节都能被完整的接收到，而且到达客户端的顺序也一样。</p>
+<p style="color:rgb(250,150,150)">IPv4：TCP/IP协议的第四个版本</p><p style="color:rgb(250,150,150)">IPv6：在1994年时，工作组开始着手制定Internet Protocol next generation(IPng)需要一个版本号时，v5已经被分配给了另一个实验性协议（Internet Stream Protocol）ST,但是ST一直没有什么进展，因此TCP/IP的下一个版本就成了IPv6</p>
 
+
+<h6 id="2-1-三次握手"><a href="#2-1-三次握手" class="headerlink" title="2.1 三次握手"></a>2.1 三次握手</h6><img src="/2018/06/13/《Web性能权威指南》读书笔记-second/TCP.png" class="osi" title="OSI七层模型">
+<ul>
+<li><strong>SYN</strong><br>客户端选择一个随机序列号x，并发送一个SYN分组，其中还可能包括其他TCP标志和选项。</li>
+<li><strong>SYN ACK</strong><br>服务器给x加1，并且选择一个自己的随机序列号y，追加自己的标志和选项，然后返回响应。</li>
+<li><strong>ACK</strong><br>客户端给x和y加1并发送握手时期的最后一个ACK分组</li>
+</ul>
+<p>三次握手之后，客户端和服务器之间就可以开始通信了。客户端可以在发送ACK分组之后立即发送数据，而服务器必须等到接收到ACK分组之后才能发送数据。这个过程适用于所有的TCP连接，因此对所有使用TCP的应用的性能有巨大的影响，因为每次传输数据之前都要经历一次完整的往返。这也决定了提高TCP的应用性能的关键在于想办法重用连接。</p>
+<p style="color:rgb(250,150,150)">PS：在三次握手的过程中，连接的带宽对时间没有影响，延迟完全取决于客户端和服务端之间的往返时间，这其中主要是客户端到服务器的传输时间</p>
+
+<h6 id="2-2-拥塞预防和控制"><a href="#2-2-拥塞预防和控制" class="headerlink" title="2.2 拥塞预防和控制"></a>2.2 拥塞预防和控制</h6><h6 id="2-2-1流量控制"><a href="#2-2-1流量控制" class="headerlink" title="2.2.1流量控制"></a>2.2.1流量控制</h6><p><strong>流量控制：</strong>流量控制是一种预防发送端过多的向接收端发送数据的机制。否则接收端可能因为忙碌、负载重或者缓冲区既定而无法处理。为实现流量的控制，TCP连接的每一方都要通告自己的接受窗口（rwnd）的大小，其中包含能够保存数据的缓冲区空间大小的信息。</p>
+<p><strong>窗口缩放：</strong>最初的TCP规范分配给通告窗口的字段是16位的，这相当于设定了发送端和接收端的窗口的最大值（2的16次方即65535字节）。为了解决这个问题，RFC1323提供了<strong><em>“TCP窗口缩放(TCP Window Scaling)”</em></strong>选项可以把接受窗口的大小提高到1G字节。今天，TCP窗口缩放机制在所有主要平台上都是默认开启的。</p>
+<h6 id="2-2-2慢启动"><a href="#2-2-2慢启动" class="headerlink" title="2.2.2慢启动"></a>2.2.2慢启动</h6><p>流量控制确实可以防止发送端向接收端过多的发送数据，但是却没有机制预防任何一端向潜在网络过多的发送数据。发送端和接收端在连接建立之初，谁也不知道可用带宽是多少，因此需要一个估算机制，然后还需要根据网络中不断变化的条件而动态改变速度。</p>
+<p><i style="color:#d2d2d2;">一个例子：可以想象你在家里观看一个大型的流视频。视频服务器会根据你的下行连接提供最高品质的信息。而此时，你的身边有人打开了一个大型的下载包，可供视屏流使用的下行带宽瞬间减小，视频服务器必须调整他的发送速度。否则，如果继续保持同样的速度，那么数据很快就会堆积在某个中间的网关，最终导致分组被删除，从而降低网络传输效率。</i></p>
+<p><strong>拥塞窗口大小（cwnd）：</strong>发送端对从客户端接受确认（ACK）之前可以发送数据量的限制。<br><ul style="color:rgb(250,150,150)"><br>    <li>rwnd主要是用来解决接收端过载的问题，而cwnd则是用来解决网络过载问题的。</li><br>    <li>同时cwnd只是接收端独自维护的一个私有变量，而接收端和发送端之间可以传输的最大数据量取决于cwnd和rwnd的最小值。</li><br></ul></p>
+<p>在经历了三次握手之后,客户端和服务器就可以进行信息交流了，首先接收端通过TCP连接初始化一个新的拥塞窗口（cwnd）变量，将其设置为一个系统设定的保守值（在linux中就是initcwnd）<br>慢启动的解决方案，即在连接建立后缓慢的增大cwnd的大小，最初cwnd的值只有1个TCP段，然后成指数增长，这等于是说，只要是运行在TCP上的应用层协议，都不可能一下就完全利用连接的最大带宽</p>
+<img src="/2018/06/13/《Web性能权威指南》读书笔记-second/slow-start.png" class="osi" title="OSI七层模型">
+<p><strong>计算公式一：cwnd大小达到N所需的时间</strong><br>一个例子：</p>
+<ul>
+<li>N=64kb；</li>
+<li>初始的拥塞窗口：4段；</li>
+<li>往返时间是56ms</li>
+<li>64kb=63535字节 一段拥塞窗口=1460字节<br>65535字节/1460字节≈45段<br>4<em>2^x&gt;=45<br>得出 x&gt;4<br>4</em>56=224ms</li>
+<li>所以得出要达到客户端与服务端之间64kb每次的吞吐量，需要四次往返，这是几百毫秒的延迟！并且只跟初始cwnd的大小以及往返时间有关系</li>
+</ul>
+<p style="color:rgb(250,150,150)">PS：慢启动重启，除了调节新连接的传输速度，TCP还实现了SSR(Slow-Start Restart,慢启动重启)机制。这种机制会在连接空闲一定时间后重置连接的拥塞窗口。道理很简单，在连接空闲的同时，网络状况也可能发生了变化，为了避免拥塞，理应将拥塞窗口重置会安全的默认值</p>
+
+<h6 id="2-2-3-拥塞预防"><a href="#2-2-3-拥塞预防" class="headerlink" title="2.2.3 拥塞预防"></a>2.2.3 拥塞预防</h6><p>TCP调节性能主要依赖于丢包反馈机制。<br>慢启动以保守的窗口初始化连接，随后的每次往返都会成倍的提高传输的数据量，直到超过接收端的流量控制窗口，即系统配置的拥塞阀值(ssthresh)窗口，或者有分组丢失为止，此时拥塞预防算法介入。</p>
+<img src="/2018/06/13/《Web性能权威指南》读书笔记-second/congestion.png" class="congestion" title="拥塞预防和拥塞控制">
+<p>重置拥塞窗口后，拥塞预防按照自己的算法来增大窗口以尽量避免丢包。某个时刻可能又会有包丢失，于是这个过程再重头开始。</p>
+<h6 id="2-3-带宽延迟积"><a href="#2-3-带宽延迟积" class="headerlink" title="2.3 带宽延迟积"></a>2.3 带宽延迟积</h6><p><strong>重要概念</strong></p>
+<ul>
+<li>带宽延迟积：BDP(Bandwidth-delay product) 数据链路容量与其端到端延迟的乘积。这个结果就是任意时刻在途未确认状态的最大数据量。</li>
+</ul>
+<p><em>如何充分利用带宽</em></p>
+<ul>
+<li>增大rwnd(流量控制窗口)和cwnd(拥塞控制窗口)的最小值</li>
+<li>或者减少端到端的延迟<br>首先假设cwnd和rwnd的最小值是16KB<br>端与端之间的往返时间是100ms<br>16KB=131072 bit<br>131072bit/0.1s=1310720bit/s=1.31M bit/s<br>所以不管发送端还是接收端的实际带宽是多大，这个TCP连接的传输速率只取决于最小窗口值，以及往返时间</li>
+</ul>
+<h6 id="2-4-队首阻塞"><a href="#2-4-队首阻塞" class="headerlink" title="2.4 队首阻塞"></a>2.4 队首阻塞</h6><p>TCP在不可靠的信道上实现了可靠的网络传输。基本的分组错误检测与纠正、按序交付、丢包重发、以及保证网络最高效率的流量控制、拥塞预防与控制机制<br><strong>重要概念</strong></p>
+<ul>
+<li><em><strong>队首阻塞：</strong></em>每个TCP分组都会带着一个唯一的序列号被发出，而所有的分组必须按顺序传送到接收端。如果中途有一个分组没能到达接收端，那么后续的分组必须保存在接收端的TCP缓冲区，等待丢失的分组重新发送并到达接收端。这种效应被称为队首阻塞。</li>
+</ul>
+<p>队首阻塞造成的延迟可以让我们的应用程序不用关心分组重排和重组，从而让代码保持简洁。但是分组到达时间会出现无法预测的延迟变化。这个时间变化通常被成为<i style="color:#d2d2d2;">抖动</i>，也是影响应用程序性能的一个主要因素。<br>无需按序交付或者能够处理分组丢失的应用程序，以及对延迟或抖动要求很高的应用程序最好选择UDP协议。</p>
+<h6 id="2-5-针对TCP的优化建议"><a href="#2-5-针对TCP的优化建议" class="headerlink" title="2.5 针对TCP的优化建议"></a>2.5 针对TCP的优化建议</h6><p>TCP是一个自适应的、对所有网络节点一视同仁的、最大限度利用底层网络的协议。因此，优化TCP的最佳途径就是调整他感知当前网络状况的方式，根据它之上或之下的抽象层类型和需求来改变他们的行为。<br>不同的应用程序需求间的复杂关系，以及每个TCP算法中的大量因素，使得TCP调优成为学术和商业上的无底洞。<br>尽管每个算法和反馈机制的具体细节可能会继续发展，但核心原理以及他们的影响是不会变的：</p>
+<ul>
+<li>TCP三次握手增加了整整一次往返时间；</li>
+<li>TCP慢启动将会应用到每一个新连接；</li>
+<li>TCP流量以及拥塞控制会影响所有连接的吞吐量；</li>
+<li>TCP的吞吐量由当前拥塞窗口的大小控制。</li>
+</ul>
+<h6 id="2-5-1-服务器配置调优"><a href="#2-5-1-服务器配置调优" class="headerlink" title="2.5.1 服务器配置调优"></a>2.5.1 服务器配置调优</h6><p>首先应该进行的操作就是升级服务器内核<br>TCP的最佳实践以及影响其性能的底层算法一直在与时俱进，而且大多数变化都只在最新内核中才有实现。<br>有了最新的内核之后：</p>
+<ul>
+<li>增大TCP的初始拥塞窗口的大小</li>
+<li>禁用慢启动重启</li>
+<li>启用窗口缩放</li>
+<li>TCP快速打开</li>
+</ul>
+<h6 id="2-5-2-应用程序行为调优"><a href="#2-5-2-应用程序行为调优" class="headerlink" title="2.5.2 应用程序行为调优"></a>2.5.2 应用程序行为调优</h6><ul>
+<li>再快也快不过什么都不发，减少冗余数据的发送</li>
+<li>我们不能让数据传输的更快，但是可以让他们的传输的距离更短</li>
+<li>重用TCP是提升性能的关键</li>
+</ul>
+<h6 id="2-5-3-总结"><a href="#2-5-3-总结" class="headerlink" title="2.5.3 总结"></a>2.5.3 总结</h6><ul>
+<li>把服务器内核升级到最新版本；</li>
+<li>确保cwnd的大小为10；</li>
+<li>禁用空闲后的慢启动；</li>
+<li>确保启动窗口缩放；</li>
+<li>减少传输冗余数据；</li>
+<li>压缩要传输的数据；</li>
+<li>把服务器放到离用户更近的地方；</li>
+<li>尽最大的可能重用已建立的TCP连接。</li>
+</ul>
+<img src="http://p9zhc8gz7.bkt.clouddn.com/photo1.jpg">
+<p style="text-align:center;font-size:28px">The End</p>
         
     
 

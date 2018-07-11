@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
-  color: rgba(0, 0, 0, .87)
+  color: rgba(0, 0, 0, .87);
+  font-family: "Hannotate SC","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 ::-moz-selection {

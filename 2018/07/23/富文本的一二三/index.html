@@ -43,7 +43,7 @@
     
     <title>
         
-            MarkDown语法总结 | 
+            富文本的range对象与selection对象 | 
         
         Syne&#39;Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="博客,markdown语法">
+    <meta name="keywords" content="博客,富文本API">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Syne&#39;Blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/11/我的第一篇博客/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/23/富文本的一二三/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Syne&#39;Blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/06/11/我的第一篇博客/">
+    <meta property="og:url" content="http://yoursite.com/2018/07/23/富文本的一二三/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="MarkDown语法总结 | Syne&#39;Blog">
+    <meta property="og:title" content="富文本的range对象与selection对象 | Syne&#39;Blog">
     <meta property="og:image" content="/img/icon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="markdown语法"> 
+    <meta property="og:article:tag" content="富文本API"> 
 
     
-        <meta property="article:published_time" content="Mon Jun 11 2018 13:55:18 GMT+0800">
-        <meta property="article:modified_time" content="Tue Jun 12 2018 01:00:47 GMT+0800">
+        <meta property="article:published_time" content="Mon Jul 23 2018 21:12:54 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jul 30 2018 16:18:17 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/06/11/我的第一篇博客/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/07/23/富文本的一二三/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/06/11/我的第一篇博客/index.html",
-    "headline": "MarkDown语法总结",
-    "datePublished": "Mon Jun 11 2018 13:55:18 GMT+0800",
-    "dateModified": "Tue Jun 12 2018 01:00:47 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/07/23/富文本的一二三/index.html",
+    "headline": "富文本的range对象与selection对象",
+    "datePublished": "Mon Jul 23 2018 21:12:54 GMT+0800",
+    "dateModified": "Mon Jul 30 2018 16:18:17 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -280,7 +280,7 @@
             "url": "/img/icon.png"
         }
     },
-    "keywords": ",markdown语法博客",
+    "keywords": ",富文本API博客",
     "description": "",
 }
 </script>
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#这是我常用的MarkDown语法"><span class="post-toc-text"> 这是我常用的MarkDown语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-斜体字与加粗"><span class="post-toc-text">1.斜体字与加粗</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-1-斜体字"><span class="post-toc-text">1.1 斜体字</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-2-加粗字"><span class="post-toc-text">1.2 加粗字</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-删除线"><span class="post-toc-text">2.删除线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-代码块"><span class="post-toc-text">3.代码块</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-链接"><span class="post-toc-text">4.链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-1地址链接"><span class="post-toc-text">4.1地址链接</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-12邮箱链接"><span class="post-toc-text">4.12邮箱链接</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-图片"><span class="post-toc-text">5.图片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-1插入普通图片"><span class="post-toc-text">5.1插入普通图片</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-2插入带链接的图片"><span class="post-toc-text">5.2插入带链接的图片</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-列表"><span class="post-toc-text">6.列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-1有序列表"><span class="post-toc-text">6.1有序列表</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-2无序列表"><span class="post-toc-text">6.2无序列表</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-引用"><span class="post-toc-text">7.引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-1单行引用"><span class="post-toc-text">7.1单行引用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-2多行引用"><span class="post-toc-text">7.2多行引用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-3多行嵌套"><span class="post-toc-text">7.3多行嵌套</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo标签插件"><span class="post-toc-text">hexo标签插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-引用块"><span class="post-toc-text">1.引用块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-1普通引用快"><span class="post-toc-text">1.1普通引用快</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-2引用书籍的内容"><span class="post-toc-text">1.2引用书籍的内容</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-3引用网址的内容"><span class="post-toc-text">1.3引用网址的内容</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-4引用网页上的文章"><span class="post-toc-text">1.4引用网页上的文章</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-代码块"><span class="post-toc-text">2.代码块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-1普通代码块"><span class="post-toc-text">2.1普通代码块</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-2-指定语言的代码块"><span class="post-toc-text">2.2 指定语言的代码块</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-加入图片"><span class="post-toc-text">3. 加入图片</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#以上就是我写博客常用的MarkDown语法啦"><span class="post-toc-text">以上就是我写博客常用的MarkDown语法啦</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-富文本的selection对象"><span class="post-toc-text">1.富文本的selection对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取selection对象"><span class="post-toc-text">获取selection对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#selection的属性"><span class="post-toc-text">selection的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#selection的方法"><span class="post-toc-text">selection的方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-富文本的range对象"><span class="post-toc-text">2.富文本的range对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取range对象"><span class="post-toc-text">获取range对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#range对象的属性"><span class="post-toc-text">range对象的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#range对象的方法"><span class="post-toc-text">range对象的方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-常用的api"><span class="post-toc-text">3.常用的api</span></a></li></ol>
     </ul>
     
 
@@ -366,10 +366,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://p9zhc8gz7.bkt.clouddn.com/ade612df081c251db0260ce82d3f4eb0%20%281%29.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://p9zhc8gz7.bkt.clouddn.com/blog1.jpg)">
     
             <p class="article-headline-p" style="font-family: 'Hannotate SC','Helvetica Neue',Helvetica,Arial,sans-serif;">
-                MarkDown语法总结
+                富文本的range对象与selection对象
             </p>
         </div>
 
@@ -388,7 +388,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Syne</strong>
-        <span>6月 11, 2018</span>
+        <span>7月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -412,7 +412,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/markdown语法/">markdown语法</a>
+        <a class="post_tag-link" href="/tags/富文本API/">富文本API</a>
     </ul>
     
 
@@ -429,7 +429,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MarkDown语法总结&url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=富文本的range对象与selection对象&url=http://yoursite.com/2018/07/23/富文本的一二三/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -438,7 +438,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MarkDown语法总结&url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html&via=Syne" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=富文本的range对象与selection对象&url=http://yoursite.com/2018/07/23/富文本的一二三/index.html&via=Syne" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -447,7 +447,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/06/11/我的第一篇博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/23/富文本的一二三/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -456,7 +456,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/06/11/我的第一篇博客/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/23/富文本的一二三/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -481,139 +481,218 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out" >
     
-        <h2 id="这是我常用的MarkDown语法"><a href="#这是我常用的MarkDown语法" class="headerlink" title=" 这是我常用的MarkDown语法"></a> 这是我常用的MarkDown语法</h2><h4 id="1-斜体字与加粗"><a href="#1-斜体字与加粗" class="headerlink" title="1.斜体字与加粗"></a>1.斜体字与加粗</h4><h6 id="1-1-斜体字"><a href="#1-1-斜体字" class="headerlink" title="1.1 斜体字"></a>1.1 斜体字</h6><p>  语法：* *<br>  代码: </p>
-<pre><code>*一支穿云箭*
-</code></pre><p>演示效果：<em>一支穿云箭</em></p>
-<h6 id="1-2-加粗字"><a href="#1-2-加粗字" class="headerlink" title="1.2 加粗字"></a>1.2 加粗字</h6><p>  语法：** **<br>  代码: </p>
-<pre><code>  **千军万马来相见**
-</code></pre><p>演示效果：<strong>千军万马来相见</strong></p>
-<h4 id="2-删除线"><a href="#2-删除线" class="headerlink" title="2.删除线"></a>2.删除线</h4><p> 语法：~~ ~~<br> 代码: </p>
-<pre><code> ~~问你苦不苦？~~
-</code></pre><p>演示效果：<del>问你苦不苦？</del></p>
-<h4 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3.代码块"></a>3.代码块</h4><p>  语法：``` ```<br>  代码:  </p>
-<pre><code>``` html
-&lt;div class=&quot;xixi&quot; id=&quot;haha&quot;&gt;&lt;p&gt;我什么都不知道啊&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;你猜我知不知道&lt;/p&gt;
-```
-</code></pre><p>  演示效果：</p>
-<pre><code class="html">&lt;div class=&quot;xixi&quot; id=&quot;haha&quot;&gt;&lt;p&gt;我什么都不知道啊&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;你猜我知不知道&lt;/p&gt;
+        <p>因为之前做了一个听单配置的项目，涉及到富文本的一些API，所以就跟大家做一个简单的富文本的分享.<br>本次主要以加contenteditable为例</p>
+<h3 id="1-富文本的selection对象"><a href="#1-富文本的selection对象" class="headerlink" title="1.富文本的selection对象"></a>1.富文本的selection对象</h3><h4 id="获取selection对象"><a href="#获取selection对象" class="headerlink" title="获取selection对象"></a>获取selection对象</h4><pre><code class="javascript"> window.getSelection()
+ document.getSelection()
 </code></pre>
-  <p style="color:rgb(250,150,150)">PS:加在```后的是语言类型，如：javascript、html、css等</p>
-
-<h4 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h4><h6 id="4-1地址链接"><a href="#4-1地址链接" class="headerlink" title="4.1地址链接"></a>4.1地址链接</h6><p>语法：[title](链接地址)<br>代码：</p>
-<pre><code>[百度一下](http://www.taobao.com)
-</code></pre><p>演示效果：<a href="http://www.taobao.com" target="_blank" rel="noopener">百度一下</a></p>
-<h6 id="4-12邮箱链接"><a href="#4-12邮箱链接" class="headerlink" title="4.12邮箱链接"></a>4.12邮箱链接</h6><p>语法：&lt;邮箱地址&gt;<br>代码：</p>
-<pre><code>&lt;738481015@qq.com&gt;
-</code></pre><p>演示效果：<a href="mailto:&#x37;&#51;&#x38;&#52;&#56;&#49;&#48;&#49;&#53;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x37;&#51;&#x38;&#52;&#56;&#49;&#48;&#49;&#53;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-<h4 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h4><h6 id="5-1插入普通图片"><a href="#5-1插入普通图片" class="headerlink" title="5.1插入普通图片"></a>5.1插入普通图片</h6><p>语法：![图片alt](图片地址)<br>代码：</p>
-<pre><code>![测试一下图片](./bg1.jp代码)
-</code></pre><p>演示效果：<img src="/2018/06/11/我的第一篇博客/bg1.jpeg" alt="测试一下图片"></p>
-<h6 id="5-2插入带链接的图片"><a href="#5-2插入带链接的图片" class="headerlink" title="5.2插入带链接的图片"></a>5.2插入带链接的图片</h6><p>语法：[![图片alt](图片地址)](链接地址)<br>代码：</p>
-<pre><code>[![测试一下图片](./bg1.jp代码)](http://www.baidu.com)
-</code></pre><p>演示效果：<a href="http://www.baidu.com" target="_blank" rel="noopener"><img src="/2018/06/11/我的第一篇博客/bg1.jpeg" alt="测试一下图片"></a></p>
-<h4 id="6-列表"><a href="#6-列表" class="headerlink" title="6.列表"></a>6.列表</h4><h6 id="6-1有序列表"><a href="#6-1有序列表" class="headerlink" title="6.1有序列表"></a>6.1有序列表</h6><p>语法：1. 2. 3.<br>代码：</p>
-<pre><code>1. 嘻嘻嘻
-2. 哈哈哈
-3. 呵呵呵
-</code></pre><p>演示效果：</p>
-<ol>
-<li>嘻嘻嘻</li>
-<li>哈哈哈</li>
-<li>呵呵呵</li>
-</ol>
-<p style="color:rgb(250,150,150)">PS：.后面需要加一个空格</p>
-
-<h6 id="6-2无序列表"><a href="#6-2无序列表" class="headerlink" title="6.2无序列表"></a>6.2无序列表</h6><p>语法：*<br>代码：</p>
-<pre><code>* 银鞍照白马
-* 飒沓如流星
-</code></pre><p>演示效果：</p>
-<ul>
-<li>银鞍照白马</li>
-<li>飒沓如流星</li>
+<p>在富文本编辑器中，使用getSelection()方法，可以确定实际选择的文本。这个方法是window对象和document对象的属性，调用它会返回一个表示当前选择文本的Selection对象。</p>
+<h4 id="selection的属性"><a href="#selection的属性" class="headerlink" title="selection的属性"></a>selection的属性</h4><img src="/2018/07/23/富文本的一二三/sel1.png" class="osi" title="选区">
+<p><strong>anchorNode：</strong>Returns the Node in which the selection begins. </p>
+<p><strong>anchorOffset：</strong>Returns a number representing the offset of the selection’s anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.</p>
+<p><strong>focusNode：</strong>Returns the Node in which the selection ends.</p>
+<p><strong>focusOffset：</strong>Returns a number representing the offset of the selection’s anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.</p>
+<p><strong>isCollapsed：</strong>Returns a Boolean indicating whether the selection’s start and end points are at the same position.</p>
+<p><strong>rangeCount：</strong>Returns the number of ranges in the selection.</p>
+<p><strong>type：</strong>Returns a DOMString describing the type of the current selection</p>
+<h4 id="selection的方法"><a href="#selection的方法" class="headerlink" title="selection的方法"></a>selection的方法</h4><ul>
+<li>1.Selection.addRange(range)<br>向选区（Selection）中添加一个区域（Range）<pre><code class="javascript">let strong = $(&#39;strong&#39;)
+let sle = window.getSelection()
+if (sle.rangeCount &gt; 0) {
+   sle.removeAllRanges()
+}
+let range = document.createRange();
+   range.selectNode(strong[0]);
+   sle.addRange(range);
+</code></pre>
+</li>
+<li>2.Selection.collapse(parentNode)<br> 这个方法方法可以收起当前选区到一个点。<pre><code class="javascript">let strong = $(&#39;strong&#39;)
+let sle = window.getSelection()
+  sle.collapse(strong[0]);
+</code></pre>
+</li>
+<li>3.Selection.collapseToEnd()<br>这个方法的作用是取消当前选区，并把光标定位在原选区的最末尾处<pre><code class="javascript">let sle = window.getSelection()
+  sle.collapseToEnd()
+</code></pre>
+</li>
+<li>4.Selection.collapseToStart()<br>这个方法的作用是取消当前选区，并把光标定位在原选区的最开始处<pre><code class="javascript">let sle = window.getSelection()
+  sle.collapseToStart()
+</code></pre>
+</li>
+<li>5.Selection.containsNode(aNode,aPartlyContained)<br>这个方法判断指定的节点是否包含在Selection中(是否被选中)<br><strong>aNode：</strong>需要判断是否被包含的节点<br><strong>aPartlyContained：</strong>布尔值，为true时，只要selection包含aNode的一部分就返回true,为false时，只有完全包含才返回true</li>
+<li>6.Selection.deleteFromDocument()<br>这个方法用来删除选区里面的内容<pre><code class="javascript">let sle = window.getSelection()
+  sle.deleteFromDocument()
+</code></pre>
+</li>
+<li>7.Selection.extend(node, offset)<br><strong>node：</strong>焦点会被移至此节点内<br><strong>offset：</strong>在节点中的偏移量<br>方法移动选中区的焦点到指定的点。选中区的锚点不会移动。选中区将从锚点开始到新的焦点，不管方向。<pre><code class="javascript">let sle = window.getSelection()
+let $strong=$(&#39;strong&#39;)
+  sle.extend($strong[0])
+</code></pre>
+</li>
+<li>8.Selection.getRangeAt(index)<br><strong>index：</strong>该参数指定需要被处理的子集编号（从零开始计数）。如果该数值被错误的赋予了大于或等于 rangeCount 结果的数字，将会产生错误。<pre><code class="javascript">let sle = window.getSelection()
+let ranges=[]
+  for (let index = 0; index &lt; sle.rangeCount; index++) {
+      const element = sle.getRangeAt(index);
+      ranges.push(element)
+  }
+</code></pre>
+</li>
+<li>9.Selection.removeAllRanges()<br>这个方法会从当前selection对象中移除所有的range对象,取消所有的选择只 留下anchorNode 和focusNode属性并将其设置为null。<pre><code class="javascript">let strong = $(&#39;strong&#39;)
+let sle = window.getSelection()
+if (sle.rangeCount &gt; 0) {
+   sle.removeAllRanges()
+}
+let range = document.createRange();
+   range.selectNode(strong[0]);
+   sle.addRange(range);
+</code></pre>
+</li>
+<li>10.Selection.removeRange(range)<br>这个方法会从当前selection对象中移除传入的range对象,因为chrome只有一个range对象，所以就相当于Selection.removeAllRanges()</li>
+<li>11.Selection.selectAllChildren(parentNode)<br><strong>parentNode：</strong>所有parentNode元素的子元素会被设为选中区域，parentNode本身除外。<pre><code class="javascript">let sle = window.getSelection()
+let $parent=$(&#39;.selected&#39;)
+  sle.selectAllChildren($parent[0])
+</code></pre>
+</li>
+<li>12.Selection.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)<br>这个方法是Selection接口用来选中并设置在两个特定的DOM节点中文本选中的范围, 并且选中的任何内容都位于两个节点之间.如果anchorNode和focusNode为同一元素则光标移动至该节点处<br>  <strong>anchorNode</strong>锚节点-选中内容的开始节点<br>  <strong>anchorOffset</strong>选中范围内起点位置在锚节点下第几个子节点的位置.例如,如果是值为0的话，整个节点都是被选中的. 如果值为1的话，那么至少整个节点至少有一个子节点被选中. 以此类推.<br>  <strong>focusNode</strong>焦点节点-选中内容的结尾节点<br>  <strong>focusOffset</strong>选中范围内结束位置在焦点节点下第几个子节点的位置.例如,如果是值为0的话，整个节点都是被选中的. 如果值为1的话，那么至少整个节点至少有一个子节点被选中. 以此类推.<pre><code class="javascript">let sle = window.getSelection()
+let $strong=$(&#39;strong&#39;)
+let $selected2=$(&#39;.selected2&#39;)
+sle.setBaseAndExtent($strong[0],0,$selected2[0],0)
+</code></pre>
+</li>
+<li>13.Selection.toString()<br>返回代表当前selection对象的字符串,例如当前选择的文本文字.<pre><code class="javascript">let sle = window.getSelection()
+sle.toString()
+</code></pre>
+</li>
 </ul>
-<h4 id="7-引用"><a href="#7-引用" class="headerlink" title="7.引用"></a>7.引用</h4><h6 id="7-1单行引用"><a href="#7-1单行引用" class="headerlink" title="7.1单行引用"></a>7.1单行引用</h6><p>语法：&gt;<br>代码：</p>
-<pre><code>&gt; 十步杀一人，千里不留行
-</code></pre><p>演示效果：</p>
-<blockquote>
-<p>十步杀一人，千里不留行</p>
-</blockquote>
-<h6 id="7-2多行引用"><a href="#7-2多行引用" class="headerlink" title="7.2多行引用"></a>7.2多行引用</h6><p>语法：&gt;<br>代码：</p>
-<pre><code>&gt; 十步杀一人，千里不留行
-&gt; 事了拂衣去，深藏功与名
-</code></pre><p>演示效果：</p>
-<blockquote>
-<p>十步杀一人，千里不留行<br>事了拂衣去，深藏功与名</p>
-</blockquote>
-<h6 id="7-3多行嵌套"><a href="#7-3多行嵌套" class="headerlink" title="7.3多行嵌套"></a>7.3多行嵌套</h6><p>语法：&gt;<br>代码：</p>
-<pre><code>&gt; 云想衣裳花想容，春风拂槛露华浓
-&gt;&gt; 若非群玉山头见，会向瑶台月下逢
-&gt;&gt;&gt;一枝红艳露凝香，云雨巫山枉断肠
-</code></pre><p>演示效果：</p>
-<blockquote>
-<p>云想衣裳花想容，春风拂槛露华浓</p>
-<blockquote>
-<p>若非群玉山头见，会向瑶台月下逢</p>
-<blockquote>
-<p>一枝红艳露凝香，云雨巫山枉断肠</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><hr></p>
-<h3 id="hexo标签插件"><a href="#hexo标签插件" class="headerlink" title="hexo标签插件"></a>hexo标签插件</h3><h4 id="1-引用块"><a href="#1-引用块" class="headerlink" title="1.引用块"></a>1.引用块</h4><pre><code>{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-</code></pre><h6 id="1-1普通引用快"><a href="#1-1普通引用快" class="headerlink" title="1.1普通引用快"></a>1.1普通引用快</h6><p>代码：</p>
-<pre><code>{% blockquote %}
-春江潮水连海平，海上明月共潮生。
-滟滟随波千万里，何处春江无月明。
-{% endblockquote %}
-</code></pre><p>演示效果：<br><blockquote><p>春江潮水连海平，海上明月共潮生。<br>滟滟随波千万里，何处春江无月明。</p>
-</blockquote></p>
-<h6 id="1-2引用书籍的内容"><a href="#1-2引用书籍的内容" class="headerlink" title="1.2引用书籍的内容"></a>1.2引用书籍的内容</h6><p>代码：</p>
-<pre><code>{% blockquote 《Do not go gentle into that good night》, ——Dylan Thomas %}
-Do not go gentle into that good night,
-Old age should burn and rave at close of day;
-Rage, rage against the dying of the light.
-{% endblockquote %}
-</code></pre><p>演示效果：<br><blockquote><p>Do not go gentle into that good night,<br>Old age should burn and rave at close of day;<br>Rage, rage against the dying of the light.</p>
-<footer><strong>《Do not go gentle into that good night》</strong><cite>——Dylan Thomas</cite></footer></blockquote></p>
-<h6 id="1-3引用网址的内容"><a href="#1-3引用网址的内容" class="headerlink" title="1.3引用网址的内容"></a>1.3引用网址的内容</h6><p>代码：</p>
-<pre><code>{% blockquote @Synewl http://synewl.coding.me/ %}
-你以为完事啦？
-{% endblockquote %}
-</code></pre><p>演示效果：<br><blockquote><p>你以为完事啦？</p>
-<footer><strong>@Synewl——</strong><cite><a href="http://synewl.coding.me/" target="_blank" rel="noopener">synewl.coding.me</a></cite></footer></blockquote></p>
-<h6 id="1-4引用网页上的文章"><a href="#1-4引用网页上的文章" class="headerlink" title="1.4引用网页上的文章"></a>1.4引用网页上的文章</h6><p>代码：</p>
-<pre><code>{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
-Every interaction is both precious and an opportunity to delight.
-{% endblockquote %}
-</code></pre><p>展示效果：<br><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote></p>
-<h4 id="2-代码块"><a href="#2-代码块" class="headerlink" title="2.代码块"></a>2.代码块</h4><pre><code>{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-</code></pre><h6 id="2-1普通代码块"><a href="#2-1普通代码块" class="headerlink" title="2.1普通代码块"></a>2.1普通代码块</h6><p>代码：</p>
-<pre><code>{% codeblock %}
-console.log('你该不会是个傻子吧？');
-{% endcodeblock %}
-</code></pre><p>展示效果：<br><pre><code>console.log(&#39;你该不会是个傻子吧？&#39;);</code></pre></p>
-<h6 id="2-2-指定语言的代码块"><a href="#2-2-指定语言的代码块" class="headerlink" title="2.2 指定语言的代码块"></a>2.2 指定语言的代码块</h6><p>代码：</p>
-<pre><code>{% codeblock lang:javascript %}
-let a={}
-let b=[]
-{% endcodeblock %}
-</code></pre><p>演示效果：<br><pre><code>let a={}
-let b=[]</code></pre></p>
-<h4 id="3-加入图片"><a href="#3-加入图片" class="headerlink" title="3. 加入图片"></a>3. 加入图片</h4><p>代码：</p>
-<pre><code>{% img testImg /2018/06/11/我的第一篇博客/bg1.jpeg 1000 200 我只是看下大不大%}
-</code></pre><p>演示效果：<br><img src="/2018/06/11/我的第一篇博客/bg1.jpeg" class="testImg" width="1000" height="200" title="我只是看下大不大"></p>
-<hr>
-
-<h4 id="以上就是我写博客常用的MarkDown语法啦"><a href="#以上就是我写博客常用的MarkDown语法啦" class="headerlink" title="以上就是我写博客常用的MarkDown语法啦"></a>以上就是我写博客常用的MarkDown语法啦</h4><p>希望大家也可以每天写写字，记录生活<br><img src="/2018/06/11/我的第一篇博客/photo1.jpg"></p>
-<p style="text-align:center;font-size:28px">The End</p>
-
+<h3 id="2-富文本的range对象"><a href="#2-富文本的range对象" class="headerlink" title="2.富文本的range对象"></a>2.富文本的range对象</h3><p>Range表示包含节点和部分文本节点的文档片段</p>
+<h4 id="获取range对象"><a href="#获取range对象" class="headerlink" title="获取range对象"></a>获取range对象</h4><ul>
+<li>1.Document.createRange()</li>
+<li>2.Selection.getRangeAt(index)</li>
+<li>3.构造函数new Range()</li>
+</ul>
+<h4 id="range对象的属性"><a href="#range对象的属性" class="headerlink" title="range对象的属性"></a>range对象的属性</h4><img src="/2018/07/23/富文本的一二三/range.png" class="osi" title="range对象">
+<p><strong>collapsed：</strong>返回一个用于判断 Range 起始位置和终止位置是否相同的布尔值。<br><strong>commonAncestorContainer：</strong>返回包含 startContainer 和 endContainer 的最深的节点。<br><strong>endContainer：</strong>返回包含 Range 终点的节点。<br><strong>endOffset ：</strong>返回 endContainer 中表示Range终点位置的数字。如果 endContainer 的 Node 类型为 Text, Comment，或 CDATASection，偏移值是 endContainer 节点开头到 Range 末尾的总字符个数。对其他类型的 Node ， endOffset 指 endContainer 开头到 Range 末尾的总 Node 个数。这是个只读属性，要改变它， 请使用 Range.setEnd 方法。<br><strong>startContainer：</strong>返回包含 Range 开始的节点。<br><strong>startOffset ：</strong>返回 startContainer 中表示 Range 起始位置的数字。如果 startContainer 是一个文本（Text）、注释（Comment）或者CDATA区块（CDATASection）节点那么返回的偏移量是从 startContainer 开始到Range的边界点的距离。对于其他的节点类型， startOffset 返回 startContainer 到边界点的子元素数量。</p>
+<h4 id="range对象的方法"><a href="#range对象的方法" class="headerlink" title="range对象的方法"></a>range对象的方法</h4><ul>
+<li>1.Range.cloneContents()<br>这个方法返回一个克隆的节点<pre><code class="javascript">let sle = window.getSelection()
+let range=sle.getRangeAt(0)
+let dom=range.cloneContents()
+$(&#39;.richText1&#39;).append(dom);
+</code></pre>
+</li>
+<li>2.Range.cloneRange()<br>方法返回一个range对象，并且该对象的范围边界点与被克隆的range对象相同。克隆的对象是复制过来的，而非引用，所以这两个对象双方各自做出的改变，都不会影响另一方。<pre><code class="javascript">let sle = window.getSelection()
+let range=sle.getRangeAt(0)
+let cRange=range.cloneRange()
+</code></pre>
+</li>
+<li>3.Range.collapse(toStart)<br>这个方法用来折叠选区<br><strong>toStart：</strong>一个布尔值,true 折叠到 Range 的 start 节点，false 折叠到 end 节点。如果省略，则默认为 false<pre><code class="javascript">let sle = window.getSelection()
+let range=sle.getRangeAt(0)
+range.collapse(false)
+</code></pre>
+</li>
+<li>4.Range.compareBoundaryPoints(how, sourceRange)<br>这个方法用来和另一个选区来比较边界点<br>返回一个数字，-1、0、1中间的一个值，分别代表在前、相等、在后。<br><strong>how：</strong>有四个可选值<br><strong>Range.END_TO_END：</strong>对比sourceRange的结束边界点和range的结束边界点<br><strong>Range.END_TO_START：</strong>对比sourceRange的结束边界点和range的起始边界点<br><strong>Range.START_TO_END ：</strong>对比sourceRange的起始边界点和range的结束边界点<br><strong>Range.START_TO_END ：</strong>对比sourceRange的起始边界点和range的起始边界点<br><strong>sourceRange：</strong>对比的range<pre><code class="javascript">let sle = window.getSelection()
+let range=sle.getRangeAt(0)
+let cRange=range.cloneRange()
+let compare=range.compareBoundaryPoints(Range.END_TO_END,cRange)
+  console.log(compare)
+</code></pre>
+</li>
+<li>5.Range.comparePoint(referenceNode, offset)<br>这个方法用来比较节点和range的位置<br>返回一个数字，-1、0、1中间的一个值，分别代表在前、相等、在后。<br><strong>referenceNode：</strong>对比的节点<br><strong>offset：</strong>如果referenceNode是Text, Comment, 或者 CDATASection中的一种，offset代表referenceNode里面的字符数量，对于其他类型的节点，offset代表其子节点数量<pre><code class="javascript">let sle = window.getSelection()
+let range=sle.getRangeAt(0)
+let compare=range.comparePoint($strong[0],0)
+  console.log(compare)
+</code></pre>
+</li>
+<li>6.Range.createContextualFragment(tagString)<br>这个方法返回一个文档片段，相当于把string转换成一个文档片段对象，但是感觉这个没什么用很多api都能够做到<br><strong>tagString：</strong>将要转换成文档片段的字符串<pre><code class="javascript">let toString=&quot;&lt;span&gt;一支穿云箭，千军万马来相见&lt;/span&gt;&quot;
+let range=document.createRange()
+range.selectNode($selected2[0])
+let doc=range.createContextualFragment(toString)
+console.log(doc)
+$(&#39;.richText1&#39;).append(doc);
+$(&#39;.richText1&#39;).append(toString);
+</code></pre>
+</li>
+<li>7.Range.deleteContents()<br>这个方法用来移除range的内容,这个方法跟Selection.deleteFromDocument()很相似，都是移除内容的<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.deleteContents()
+</code></pre>
+</li>
+<li>8.Range.extractContents()<br>方法移动了Range 中的内容从文档树到DocumentFragment（文档片段对象），这个方法会改变文档的布局<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.deleteContents()
+</code></pre>
+</li>
+<li>9.Range.getBoundingClientRect()<br>返回一个 DOMRect 对象，该对象限定了选定的文档对象的内容，该方法返回了一个矩形，这个矩形包围了该文档对象中所有元素的边界矩形集合<img src="/2018/07/23/富文本的一二三/rect.png" class="osi" title="rect对象">
+  <strong>width：</strong>矩形的宽度<br>  <strong>height：</strong>矩形的高度<br>  <strong>left：</strong>矩形的左边与文档左边的距离<br>  <strong>right：</strong>矩形的右边与文档左边的距离<br>  <strong>top：</strong>矩形的上边与文档上边的距离<br>  <strong>bottom：</strong>矩形的下边与文档上边的距离<br>  <strong>x：</strong>矩形的左上角与文档右边的距离<br>  <strong>y：</strong>矩形的左上角与文档上边的距离<pre><code class="javascript">let range=sle.getRangeAt(0)
+let rect=range.getBoundingClientRect()
+  console.log(rect)
+</code></pre>
+</li>
+<li>10.Range.getClientRects()<br>跟上面的方法不同这个方法返回的是一个边界矩形的LIST，而上面的方法返回的是一个矩形包含所有range里面的元素<pre><code class="javascript">let range=sle.getRangeAt(0)
+let rect=range.getClientRects()
+  console.log(rect)
+</code></pre>
+</li>
+<li>11.Range.insertNode(newNode)<br>将一个node节点插入range的起始位置<br><strong>newNode：</strong>要插入的节点<pre><code class="javascript">let range=sle.getRangeAt(0)
+let dom=document.createTextNode(&#39;春江潮水连海平，海上明月共潮生&#39;)
+range.insertNode(dom)
+</code></pre>
+</li>
+<li>12.Range.intersectsNode(referenceNode)<br>返回一个布尔值，用来反映传入的node是否包含或者相交在range里面<pre><code class="javascript">let range=sle.getRangeAt(0)
+let dom=document.createTextNode(&#39;春江潮水连海平，海上明月共潮生&#39;)
+range.insertNode(dom)
+</code></pre>
+</li>
+<li>13.Range.isPointInRange(referenceNode, offset)<br>这个节点返回一个布尔值，反应指定的Point是否在这个节点中，运用在textNode中效果比较明显<pre><code class="javascript">let range=sle.getRangeAt(0)
+let bool=range.isPointInRange($strong[0].childNodes[0],0)
+console.log(bool)
+</code></pre>
+</li>
+<li>14.Range.selectNode(referenceNode)<br>这个方法可以使range包含整个referenceNode<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.selectNode($strong[0])
+</code></pre>
+</li>
+<li>15.Range.selectNodeContents(referenceNode)<br>方法设置 Range 使其包含一个 Node 的内容，这个方法和上面的selectNode很相似<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.selectNode($strong[0])
+</code></pre>
+</li>
+<li>16.Range.setEnd(endNode, endOffset)<br>方法用于设置 Range的结束位置<br><strong>endNode：</strong>endNode用于设定 Range的结束位置<br><strong>endOffset：</strong>必须为不小于0的整数。表示从endNode的结束位置算起的偏移量<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setEnd($parent[0],2)
+</code></pre>
+</li>
+<li>16.Range.setEndAfter(referenceNode)<br>这个方法会将range的终点节点设为referenceNode之后<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setEndAfter($parent[0])
+</code></pre>
+</li>
+<li>17.Range.setEndBefore(referenceNode)<br>跟上面的api相反，这个方法会将终点节点设为referenceNode之前<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setEndAfter($parent[0])
+</code></pre>
+</li>
+<li>18.Range.setStart(startNode, startOffset)<br>方法用于设置 Range的起始位置<br><strong>endNode：</strong>endNode用于设定 Range的起始位置<br><strong>endOffset：</strong>必须为不小于0的整数。表示从endNode的起始位置算起的偏移量<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setEndAfter($parent[0],0)
+</code></pre>
+</li>
+<li>19.Range.setStartAfter(referenceNode)<br>这个方法会将range的起始节点设为referenceNode之后<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setEndAfter($parent[0])
+</code></pre>
+</li>
+<li>20.Range.setStartBefore(referenceNode)<br>这个方法会将range的起始节点设为referenceNode之前<pre><code class="javascript">let range=sle.getRangeAt(0)
+  range.setStartBefore($parent[0])
+</code></pre>
+</li>
+<li>21.Range.surroundContents(newNode)<br>这个方法将Range对象的内容移动到一个新的节点, 并将这个新节点放到指定区域.<pre><code class="javascript">let red=document.createElement(&#39;strong&#39;)
+  let range=sle.getRangeAt(0)
+  range.surroundContents(red)
+</code></pre>
+</li>
+<li>22.Range.toString()<br>这个方法返回一个string,内容为range的text<pre><code class="javascript">  let range=sle.getRangeAt(0)
+  range.toString()
+</code></pre>
+</li>
+</ul>
+<h3 id="3-常用的api"><a href="#3-常用的api" class="headerlink" title="3.常用的api"></a>3.常用的api</h3><ul>
+<li>折叠选区<br>1.Selection.collapse(parentNode)<br>2.Selection.collapseToEnd()<br>3.Selection.collapseToStart()<br>4.Range.collapse(toStart)</li>
+<li>移动光标/选区<br>1.Selection.addRange(range)<br>2.Selection.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)<br>3.Range.selectNode(referenceNode)<br>4.Range.selectNodeContents(referenceNode)<br>5.Range.setEnd(endNode, endOffset)<br>6.Range.setEndAfter(referenceNode)<br>7.Range.setStartBefore(referenceNode)</li>
+<li>转移文本<br>Range.surroundContents(newNode)</li>
+</ul>
+<img src="http://p9zhc8gz7.bkt.clouddn.com/photo1.jpg">
+<p style="text-align:center;font-size:28px ;font-family: 'Hannotate SC','Helvetica Neue',Helvetica,Arial,sans-serif;">The End</p>
         
     
 
@@ -633,19 +712,19 @@ let b=[]</code></pre></p>
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/13/《Web性能权威指南》读书笔记-first/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            上一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/07/10/《Web性能权威指南》读书笔记-sixth/" id="post_nav-older" class="next-content">
+            下一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 

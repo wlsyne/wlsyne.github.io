@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Sep 29 2018 23:13:54 GMT+0800">
-        <meta property="article:modified_time" content="Sat Sep 29 2018 23:43:51 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 14 2018 15:50:20 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html",
     "headline": "关于DOM的原生JS",
     "datePublished": "Sat Sep 29 2018 23:13:54 GMT+0800",
-    "dateModified": "Sat Sep 29 2018 23:43:51 GMT+0800",
+    "dateModified": "Wed Nov 14 2018 15:50:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原生JS操作DOM"><span class="post-toc-text">原生JS操作DOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-获取高度和滚动距离"><span class="post-toc-text">1.获取高度和滚动距离</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-设置css"><span class="post-toc-text">2.设置css</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原生JS操作DOM"><span class="post-toc-text">原生JS操作DOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-获取高度和滚动距离"><span class="post-toc-text">1.获取高度和滚动距离</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-设置css和获取css"><span class="post-toc-text">2.设置css和获取css</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -496,9 +496,16 @@ document.documentElement.clientHeight
 &lt;!-- 获取整个文档的高度 --&gt;
 document.documentElement.scrollHeight||document.body.scrollHeight
 </code></pre>
-<h4 id="2-设置css"><a href="#2-设置css" class="headerlink" title="2.设置css"></a>2.设置css</h4><pre><code class="javascript">element.style.textAlign=center
+<h4 id="2-设置css和获取css"><a href="#2-设置css和获取css" class="headerlink" title="2.设置css和获取css"></a>2.设置css和获取css</h4><pre><code class="javascript">element.style.textAlign=center
 &lt;!-- 如果要设置!important --&gt;
 element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;);
+&lt;!-- 获取css --&gt;
+function Getstyle(ele) {
+        let style = window.getComputedStyle
+            ? window.getComputedStyle(ele, &quot;&quot;)
+            : ele.currentStyle;
+        return style
+    }
 </code></pre>
 
         
@@ -519,6 +526,14 @@ element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/10/14/ES6中的Generator/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            上一篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -618,7 +633,7 @@ element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
@@ -636,7 +651,7 @@ element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Reading-notes/">Reading notes<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/summarization/">summarization<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/summary-of-dailywork/">summary of dailywork<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/categories/Reading-notes/">Reading notes<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/summarization/">summarization<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/summary-of-dailywork/">summary of dailywork<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
@@ -670,7 +685,7 @@ element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">10</span>
+                <span class="sidebar-badge">12</span>
             </a>
         </li>
         

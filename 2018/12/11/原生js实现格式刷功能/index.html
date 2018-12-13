@@ -43,7 +43,7 @@
     
     <title>
         
-            关于DOM的原生JS | 
+            基于wangEditor实现格式刷功能 | 
         
         Syne&#39;Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="博客,DOM">
+    <meta name="keywords" content="博客,js">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Syne&#39;Blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/09/29/关于DOM的原生JS/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/12/11/原生js实现格式刷功能/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Syne&#39;Blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/09/29/关于DOM的原生JS/">
+    <meta property="og:url" content="http://yoursite.com/2018/12/11/原生js实现格式刷功能/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="关于DOM的原生JS | Syne&#39;Blog">
+    <meta property="og:title" content="基于wangEditor实现格式刷功能 | Syne&#39;Blog">
     <meta property="og:image" content="/img/icon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="DOM"> 
+    <meta property="og:article:tag" content="js"> 
 
     
-        <meta property="article:published_time" content="Sat Sep 29 2018 23:13:54 GMT+0800">
-        <meta property="article:modified_time" content="Tue Dec 11 2018 16:09:22 GMT+0800">
+        <meta property="article:published_time" content="Tue Dec 11 2018 16:03:59 GMT+0800">
+        <meta property="article:modified_time" content="Thu Dec 13 2018 17:44:32 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html",
-    "headline": "关于DOM的原生JS",
-    "datePublished": "Sat Sep 29 2018 23:13:54 GMT+0800",
-    "dateModified": "Tue Dec 11 2018 16:09:22 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html",
+    "headline": "基于wangEditor实现格式刷功能",
+    "datePublished": "Tue Dec 11 2018 16:03:59 GMT+0800",
+    "dateModified": "Thu Dec 13 2018 17:44:32 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Syne",
@@ -280,7 +280,7 @@
             "url": "/img/icon.png"
         }
     },
-    "keywords": ",DOM博客",
+    "keywords": ",js博客",
     "description": "",
 }
 </script>
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原生JS操作DOM"><span class="post-toc-text">原生JS操作DOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-获取高度和滚动距离"><span class="post-toc-text">1.获取高度和滚动距离</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-设置css和获取css"><span class="post-toc-text">2.设置css和获取css</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Document"><span class="post-toc-text">3.Document</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-Element"><span class="post-toc-text">4.Element</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#属性"><span class="post-toc-text">属性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方法"><span class="post-toc-text">方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-Node"><span class="post-toc-text">5.Node</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#属性-1"><span class="post-toc-text">属性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方法-1"><span class="post-toc-text">方法</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现步骤"><span class="post-toc-text">实现步骤</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-点击格式刷获取样式"><span class="post-toc-text">1.点击格式刷获取样式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-将保存的style赋予光标扫过的选区里的节点"><span class="post-toc-text">2.将保存的style赋予光标扫过的选区里的节点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片注解"><span class="post-toc-text">图片注解</span></a></li></ol>
     </ul>
     
 
@@ -366,10 +366,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/2018/09/29/关于DOM的原生JS/DOM.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/2018/12/11/原生js实现格式刷功能/js.png)">
     
             <p class="article-headline-p" style="font-family: 'Hannotate SC','Helvetica Neue',Helvetica,Arial,sans-serif;">
-                关于DOM的原生JS
+                基于wangEditor实现格式刷功能
             </p>
         </div>
 
@@ -388,7 +388,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Syne</strong>
-        <span>9月 29, 2018</span>
+        <span>12月 11, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -412,7 +412,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/DOM/">DOM</a>
+        <a class="post_tag-link" href="/tags/js/">js</a>
     </ul>
     
 
@@ -429,7 +429,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于DOM的原生JS&url=http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于wangEditor实现格式刷功能&url=http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html&pic=http://yoursite.com/img/icon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -438,7 +438,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于DOM的原生JS&url=http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html&via=Syne" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于wangEditor实现格式刷功能&url=http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html&via=Syne" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -447,7 +447,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -456,7 +456,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/29/关于DOM的原生JS/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/11/原生js实现格式刷功能/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -481,218 +481,213 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out" >
     
-        <h3 id="原生JS操作DOM"><a href="#原生JS操作DOM" class="headerlink" title="原生JS操作DOM"></a>原生JS操作DOM</h3><h4 id="1-获取高度和滚动距离"><a href="#1-获取高度和滚动距离" class="headerlink" title="1.获取高度和滚动距离"></a>1.获取高度和滚动距离</h4><pre><code class="javascript">&lt;!-- 获取滚动距离 --&gt;
-document.documentElement.scrollTop //firefox
+        <p>最近有个需求是给富文本增加一个格式刷功能，因为项目原来采用的的是wangEditor，于是就对wangEditor做了个二次开发。<br>在网上找了半天资料没找到，小小的记录下实现的方式。</p>
+<h4 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h4><p>其实逻辑非常简单…….<br><strong>①.点击格式刷，获取光标所在节点的style并保存下来。</strong><br><strong>②.在格式刷的状态下，获取新的选区，将保存的style赋予选区中的节点</strong><br>虽然逻辑很简单实现起来还是挺有意思的</p>
+<h4 id="1-点击格式刷获取样式"><a href="#1-点击格式刷获取样式" class="headerlink" title="1.点击格式刷获取样式"></a>1.点击格式刷获取样式</h4><p>贴一下代码</p>
+<pre><code class="javascript">//这是格式刷对象里面的onClick方法
+//这是点击格式刷触发的事件，type可以是&#39;click&#39;和&#39;dblclick&#39;
+ onClick: function(e,type) {
+// editor是全局的编辑器对象（详情去看wangEditor的源码）
+        const editor = this.editor
 
-document.documentElement.scrollLeft //firefox
+// 判断选区里面是否有内容，如果有内容则不处理
+// 这样处理的原因是：如果选区覆盖了多个节点，如果节点的style不同，无法确定以哪个节点为准
+// selection是王老师封装的选区操作（详情去看wangEditor的源码）
+        const isSeleEmpty = editor.selection.isSelectionEmpty()
+        if (!isSeleEmpty) {
+            return
+        }
 
-document.body.scrollTop //IE
+// 判断当前格式刷是否已经被激活
+// 如果是激活状态：关闭格式刷
+        if (this._active) {
+            this._active = false
+            editor._brush=false
+            editor._dblBrush=false
+            this.$elem.removeClass(&#39;w-e-active&#39;)
+            editor.$textContainerElem.removeClass(&#39;brush&#39;)
+            return
+        }
 
-document.body.scrollLeft //IE
 
-&lt;!-- 获取窗口高度 --&gt;
-document.documentElement.clientHeight
+// 如果当前状态是未激活
+// 将格式刷改成激活状态
+        this._active = true
+        editor._brush=true
+// 如果是双击格式刷触发连续使用格式刷
+// 记录双击格式刷状态
+        editor._dblBrush=type===&#39;dblclick&#39;?true:false
+        this.$elem.addClass(&#39;w-e-active&#39;)
+        editor.$textContainerElem.addClass(&#39;brush&#39;)
 
-&lt;!-- 获取整个文档的高度 --&gt;
-document.documentElement.scrollHeight||document.body.scrollHeight
-</code></pre>
-<h4 id="2-设置css和获取css"><a href="#2-设置css和获取css" class="headerlink" title="2.设置css和获取css"></a>2.设置css和获取css</h4><pre><code class="javascript">element.style.textAlign=center
-&lt;!-- 如果要设置!important --&gt;
-element.style.setProperty(&#39;height&#39;, &#39;300px&#39;, &#39;important&#39;);
-&lt;!-- 获取css --&gt;
-function Getstyle(ele) {
-        let style = window.getComputedStyle
-            ? window.getComputedStyle(ele, &quot;&quot;)
-            : ele.currentStyle;
-        return style
+// 获取style
+// 先阐述一下获取style的思路：
+
+// 1.因为编辑器里面加粗，斜体，改变字体，改变字号等等功能都是获取选区里面的文字然后插入一段html
+// 长这样：&lt;span style=&quot;font-weight: bold; font-style: italic;&quot;&gt;何处春江无月明！&lt;/span&gt;
+
+// 2.但是文字居中就是加在顶级的p标签上
+// 长这样：&lt;p style=&quot;text-align: center; &quot;&gt;滟滟随波千万里，&lt;span style=&quot;font-weight: bold; font-style: italic;&quot;&gt;何处春江无月明！&lt;/span&gt;&lt;/p&gt;
+
+// 3.因此在下设计的存储style是一个对象形式
+// 长这样：{font-style:&quot;italic&quot;,font-weight:&quot;bold&quot;,wrap:{text-align:&quot;center&quot;}}
+// wrap里面的是指顶级p标签里面的样式
+
+        let containerEle = editor.selection.getSelectionContainerElem()
+//获取当前选区所在节点的style 
+//css方法是我基于wangEditor封装的Dom方法
+//下面用到的DOM方法都是可以在源码的dom-core里面找到
+        let style = containerEle.css()
+
+//向上整合style 
+//如果是顶级p标签name将style放在wrap里面，否则直接整合进style
+        while (!containerEle.equal(editor.$textElem[0])) {
+            containerEle=containerEle.parent()
+            if (containerEle.parent().equal(editor.$textElem[0])&amp;&amp;!containerEle.equal(editor.$textElem[0])) {
+                style=Object.assign({},style,{wrap:containerEle.css()})
+            }
+            if(!containerEle.parent().equal(editor.$textElem[0])&amp;&amp;!containerEle.equal(editor.$textElem[0])){
+                style=Object.assign({},style,containerEle.css())
+            }
+        }
+
+//保存style
+        editor._style=style
     }
 </code></pre>
-<h4 id="3-Document"><a href="#3-Document" class="headerlink" title="3.Document"></a>3.Document</h4><p>Document接口表示任何在浏览器中已经加载好的网页，并作为一个入口去操作网页内容（也就是DOM tree）</p>
-<pre><code class="javascript">&lt;!-- 获取body --&gt;
-Document.body
+<h4 id="2-将保存的style赋予光标扫过的选区里的节点"><a href="#2-将保存的style赋予光标扫过的选区里的节点" class="headerlink" title="2.将保存的style赋予光标扫过的选区里的节点"></a>2.将保存的style赋予光标扫过的选区里的节点</h4><p>贴一下代码</p>
+<pre><code class="javascript">//$textElem是指编辑器可编辑区域（详情请查看源码）
+$textElem.on(&#39;mouseup&#39;, e =&gt; {
+//这是wangEditor里面事实保存选区的事件
+            saveRange()
+            $textElem.off(&#39;mouseleave&#39;, saveRange)
+            if (editor._brush) {
 
-&lt;!-- 获取html --&gt;
-Document.documentElement
+//将储存的style转换成字符串形式
+                let text
+                let style=&#39;&#39;
+                let wrapStyle=&#39;&#39;
+                for (const key in editor._style) {
+                    if (editor._style.hasOwnProperty(key)) {
+                        const element = editor._style[key];
+                        if (key===&#39;wrap&#39;) {
+                            for (const Wkey in element) {
+                                if (element.hasOwnProperty(Wkey)) {
+                                    const Welement = element[Wkey];
+                                    wrapStyle+=`${Wkey}:${Welement};`
+                                }
+                            }
+                        }else{
+                            style+=`${key}:${element};`
+                        }
+                    }
+                }
 
-&lt;!-- 获取/设置title --&gt;
-Document.title
-Document.title=&#39;&#39;
 
-&lt;!-- 创建一个html元素 --&gt;
-Document.createElement(&#39;div&#39;)
+//如果没有刷到内容只是点击了一下编辑框
+//直接获取当前选取的顶级p标签，将wrapStyle赋予p标签，同时设置html的内容
+                if (editor.selection.isSelectionEmpty()) {
+                    // 如果没有选中任何内容
+                    let containerElem = editor.selection.getSelectionContainerElem().closest(&#39;p&#39;)
+                    editor.selection.createRangeByElem(containerElem)
+                    editor.selection.restoreSelection()
+                    text = editor.selection.getSelectionText()
+                    if (!text.trim()===&#39;&#39;) {
+                        containerElem[0].setAttribute(&#39;style&#39;, wrapStyle);
+                    containerElem.html(&#39;&lt;span style=&quot;&#39; + style + &#39;&quot;&gt;&#39; + text + &#39;&lt;/span&gt;&#39;);
+                    }
+                    // 折叠选区
+                    editor.selection.collapseRange()
+                } else {
+//如果刷到了内容那么就有两种情况
+//1.如果只刷了一行
+//2.如果刷了多行
+                    let range = editor.selection.getRange()
+                    let containerElem = editor.selection.getSelectionContainerElem()
+                    if (!containerElem.equal(editor.$textElem[0])) {
+// 如果只刷了一行                        
+//跟上面的处理方式相似
+                        text = editor.selection.getSelectionText()
+                        containerElem.closest(&#39;p&#39;)[0].setAttribute(&#39;style&#39;, wrapStyle)
+                        editor.cmd.do(&#39;insertHTML&#39;, `&lt;span style=&quot;${style}&quot;&gt;${text}&lt;/span&gt;`)
+                    } else {
+// 如果刷了多行                        
+//1.首先起始部分的选区：从起始位置开始到整行结束
+//2.末尾部分选区：从整行起始位置开始到选区末尾结束（请看后面的图解）
+//3.处理方式：先将选去里面的节点存进数组，然后遍历数组，根据节点创建选区
+//如果是首节点,使用range.setStart()方法
+//如果是中间节点，则不处理
+//如果是末尾节点使用range.setEnd()方法
 
-&lt;!-- 创建一个文本节点 --&gt;
-Document.createTextNode(&#39;春江潮水连海平&#39;)
+                        let elements = []
+                        let startElem = range.startContainer
+                        let startElemCon = $(startElem).closest(&#39;p&#39;)
+                        let endElem = range.endContainer
+                        let endElemCon = $(endElem).closest(&#39;p&#39;)
+                        elements.push({
+                            type: &#39;start&#39;,
+                            elem: startElem,
+                            offset: range.startOffset,
+                            containerType: range.startContainer.nodeType === 1 ? &#39;NODE&#39; : &#39;TEXT&#39;,
+                            container: startElemCon
+                        })
+                        while (!startElemCon.next().equal(endElemCon)) {
+                            startElemCon = startElemCon.next()
+                            elements.push({
+                                type: &#39;mid&#39;,
+                                elem: startElemCon,
+                                container: startElemCon
+                            })
+                        }
+                        elements.push({
+                            type: &#39;end&#39;,
+                            elem: endElem,
+                            offset: range.endOffset,
+                            containerType: range.startContainer.nodeType === 1 ? &#39;NODE&#39; : &#39;TEXT&#39;,
+                            container: endElemCon
+                        })
+                        elements.forEach(element =&gt; {
+                            let container = $(element.container)
+                            let range = editor.selection.createRangeByElem(container, null, true)
+                            if (element.type === &#39;start&#39;) {
+                                range.setStart(element.elem, element.offset)
+                                editor.selection.saveRange(range)
+                                editor.selection.restoreSelection()
+                                text = editor.selection.getSelectionText()
+                                container[0].setAttribute(&#39;style&#39;, wrapStyle)
+                                editor.cmd.do(&#39;insertHTML&#39;, `&lt;span style=&quot;${style}&quot;&gt;${text}&lt;/span&gt;`)
+                            } else if (element.type === &#39;mid&#39;) {
+                                text = range.toString()
+                                container[0].setAttribute(&#39;style&#39;, wrapStyle)
+                                editor.cmd.do(&#39;insertHTML&#39;, `&lt;span style=&quot;${style}&quot;&gt;${text}&lt;/span&gt;`)
+                            } else if (element.type === &#39;end&#39;) {
+                                range.setEnd(element.elem, element.offset)
+                                editor.selection.saveRange(range)
+                                editor.selection.restoreSelection()
+                                text = editor.selection.getSelectionText()
+                                container[0].setAttribute(&#39;style&#39;, wrapStyle)
+                                editor.cmd.do(&#39;insertHTML&#39;, `&lt;span style=&quot;${style}&quot;&gt;${text}&lt;/span&gt;`)
+                            }
+                        });
+                    }
+                }
 
-&lt;!-- 通过class来查找元素 --&gt;
-let elements = document.getElementsByClassName(names); 
-let elements = rootElement.getElementsByClassName(names);
-//这个api可以在任何元素上调用，调用这个api的元素将作为本次查找的根元素
-//返回包含这个class类名的NodeList
 
-&lt;!-- 通过标签名称来查找元素 --&gt;
-let elements = document.getElementsByTagName(names); 
-let elements = rootElement.getElementsByTagName(names);
-//这个api可以在任何元素上调用，调用这个api的元素将作为本次查找的根元素
-//返回符合这个标签名称的NodeList
-
-&lt;!-- 通过id来查找元素 --&gt;
-let elements = document.getElementById(names); 
-//这个api只能够在Document上调用
-//返回拥有指定id的element，如果没有找到则返回null
-
-&lt;!-- 通过选择器查找单个元素 --&gt;
-let elements = document.querySelector(selectors); 
-let elements = rootElement.querySelector(selectors);
-//这个api可以在任何元素上调用，调用这个api的元素将作为本次查找的根元素
-//返回文档中与指定选择器或选择器组匹配的第一个元素，如果找不到匹配项，则返回null。
-
-&lt;!-- 通过选择器查找元素 --&gt;
-let elements = document.querySelectorAll(selectors); 
-let elements = rootElement.querySelectorAll(selectors);
-//这个api可以在任何元素上调用，调用这个api的元素将作为本次查找的根元素
-//返回的对象是 NodeList 
-</code></pre>
-<h4 id="4-Element"><a href="#4-Element" class="headerlink" title="4.Element"></a>4.Element</h4><p>Element是非常通用的基类，所有Document对象下的对象都继承它都继承它. 这个接口描述了所有相同种类的元素所普遍具有的方法和属性<br>同时Element也是Node对象的一个类型，继承于Node对象</p>
-<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><p><strong>获取/设置元素的class</strong></p>
-<pre><code class="javascript">let clas=Element.classList
-let clas=Element.className
-Element.className=&#39;wlsyne&#39;
-//classList 返回的是一个DOMTokenList,这个api是只读的
-//className返回的是一个string
-</code></pre>
-<p><strong>获取元素的宽高</strong></p>
-<pre><code class="javascript">let height=Element.clientHeight
-let height=Element.offsetHeight
-
-let width=Element.clientWidth
-let width=Element.offsetWidth
-//offset包括边框 client包括边框
-</code></pre>
-<p><strong>获取/设置元素的id</strong></p>
-<pre><code class="javascript">let id=Element.id
-id=&#39;wlsyne&#39;
-</code></pre>
-<p><strong>获取/设置元素内部的html</strong></p>
-<pre><code class="javascript">let content=Element.innerHTML
-content=&#39;&lt;div&gt;嘻嘻嘻嘻&lt;/div&gt;&#39;
-</code></pre>
-<p><strong>获取/设置元素的html（包括该元素）</strong></p>
-<pre><code class="javascript">let content=Element.outerHTML
-content=&#39;&lt;div&gt;嘻嘻嘻嘻&lt;/div&gt;&#39;
-</code></pre>
-<p><strong>元素滚动相关</strong></p>
-<pre><code class="javascript">&lt;!-- 滚动视图高度 --&gt;
-let scrollHeight=Element.scrollHeight
-&lt;!-- 纵向滚动距离 --&gt;
-let scrollTop=Element.scrollTop
-</code></pre>
-<p><strong>获取元素的标签名</strong></p>
-<pre><code class="javascript">let name=Element.tagName
-</code></pre>
-<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><p><strong>匹配特定选择起且离当前元素最近的祖先元素</strong></p>
-<pre><code class="javascript">let elt = element.closest(selectors); 
-&lt;!-- 一个polyfill --&gt;
-  function closest(el,selector){
-       let matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
-        while (el) {
-            if (matchesSelector.call(el, selector)) {
-                break;
+//如果不是双击格式刷 那么退出格式刷
+                if (!editor._dblBrush) {
+                    editor._brush=false
+                    editor.menus.menus.format.$elem.removeClass(&#39;w-e-active&#39;)
+                    editor.$textContainerElem.removeClass(&#39;brush&#39;)
+                }
             }
-            el = el.parentElement;
-        }
-  }
+        })
 </code></pre>
-<p><strong>属性相关</strong></p>
-<pre><code class="javascript">&lt;!-- 获取元素的指定属性 --&gt;
-let attribute = element.getAttribute(attributeName);
-&lt;!-- 移除指定属性 --&gt;
-element.removeAttribute(attrName)
-&lt;!-- 设定属性 --&gt;
-element.setAttribute(name, value);
-</code></pre>
-<p><strong>获取元素的大小及其相对于视口的位置</strong></p>
-<pre><code class="javascript">let rect = element.getBoundingClientRect();
-//位置是相对于视口左上角而言
-</code></pre>
-<p><strong>判断元素是否含有相关属性</strong></p>
-<pre><code class="javascript">let result = element.hasAttribute(attName);
-</code></pre>
-<p><strong>判断元素被指定的选择器字符串选择</strong></p>
-<pre><code class="javascript">let result = element.matches(selectorString);
-//一个polyfill
-if (!Element.prototype.matches) {
-    Element.prototype.matches = 
-        Element.prototype.matchesSelector || 
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector || 
-        Element.prototype.oMatchesSelector || 
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-            return i &gt; -1;            
-        };
-}
-</code></pre>
-<h4 id="5-Node"><a href="#5-Node" class="headerlink" title="5.Node"></a>5.Node</h4><p>Node是一个接口，许多DOM类型从这个接口继承。<br>以下接口都从Node继承其方法和属性：<br>Document, Element, CharacterData (which Text, Comment, and CDATASection inherit), ProcessingInstruction, DocumentFragment, DocumentType, Notation, Entity, EntityReference</p>
-<h5 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h5><p><strong>子节点相关</strong></p>
-<pre><code class="javascript">&lt;!-- 获取所有子节点（包含所有的节点类型：text等） --&gt;
-var ndList = elementNodeReference.childNodes;
-&lt;!-- 获取所有子节点（只包含Element节点） --&gt;
-let children = node.children;
-&lt;!-- 获取第一个子节点 --&gt;
-let firstNode=node.firstChild;//可能是text节点
-let firstElem=node.firstElementChild;//只能是Element节点
-&lt;!-- 获取最后一个子节点 --&gt;
-let lastNode=node.lastChild;//可能是text节点
-let lastElem=node.lastElementChild;//只能是Element节点
-</code></pre>
-<p><strong>同级节点相关</strong></p>
-<pre><code class="javascript">&lt;!-- 获取下一个同级节点 --&gt;
-let nextNode=node.nextSibling
-let nextElem=node.nextElementSibling//只能是Element
-&lt;!-- 获取上一个同级节点 --&gt;
-let preNode=node.previousSibling
-let preElem=node.previousElementSibling//只能是Element
-</code></pre>
-<p><strong>父节点相关</strong></p>
-<pre><code class="javascript">let parent=node.parentNode
-let parentElem=node.parentElement
-</code></pre>
-<p><strong>获取节点名称</strong></p>
-<pre><code class="javascript">let name=node.nodeName
-//nodeName获取的值都是大写
-</code></pre>
-<p><strong>获取节点类型</strong></p>
-<pre><code class="javascript">let name=node.nodeType
-//1.Element_Node
-//2.Attribute_Node
-//3.Text_Node
-</code></pre>
-<h5 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h5><p><strong>子节点相关</strong></p>
-<pre><code class="javascript">&lt;!-- 向父节点末尾增加节点 --&gt;
-let child = node.appendChild(child);
-&lt;!-- 向指定子节点之前插入节点 --&gt;
-let insertedNode = parentNode.insertBefore(newNode, referenceNode);
-&lt;!-- 替换子节点 --&gt;
-let replacedNode = parentNode.replaceChild(newChild, oldChild);
-&lt;!-- 移除子节点 --&gt;
-let oldChild = node.removeChild(child);
-</code></pre>
-<p><strong>克隆节点</strong></p>
-<pre><code class="javascript">var dupNode = node.cloneNode(deep);
-//如果deep是true的话则会拷贝子节点
-</code></pre>
-<p><strong>判断一个节点是否包含指定节点</strong></p>
-<pre><code class="javascript">node.contains( otherNode ) 
-</code></pre>
-<p><strong>判断两个节点是否相等</strong></p>
-<pre><code class="javascript">node.isEqualNode(otherNode);
-</code></pre>
+<h4 id="图片注解"><a href="#图片注解" class="headerlink" title="图片注解"></a>图片注解</h4><p><strong>这是html片段</strong><br><img src="/2018/12/11/原生js实现格式刷功能/2.png"></p>
+<p><strong>这是点击格式刷存储的style</strong><br><img src="/2018/12/11/原生js实现格式刷功能/1.png"></p>
+<p><strong>这是刷过的选区于处理过的节点</strong><br><img src="/2018/12/11/原生js实现格式刷功能/3.jpg"></p>
 <img src="http://fdfs.xmcdn.com/group54/M09/63/3F/wKgLclwPcHiCCvuhAAC4EV5RUdQ324.jpg">
 <p style="text-align:center;font-size:28px ;font-family: 'Hannotate SC','Helvetica Neue',Helvetica,Arial,sans-serif;">The End</p>
+
 
 
 
@@ -716,21 +711,13 @@ let oldChild = node.removeChild(child);
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/10/14/ES6中的Generator/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            上一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/09/26/js正则表达式相关/" id="post_nav-older" class="next-content">
+        <a href="/2018/11/11/css中的奇技淫巧/" id="post_nav-older" class="next-content">
             下一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
